@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electromagnetic Theory &#8212; J-Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Signals and Systems" href="../signal%20system/signal_system.html" />
+    <link rel="prev" title="Communication System" href="../communication/communication.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">J-Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   source files
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Analog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analog/analog.html">
+   Analog Circuits
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analog/h-parameters/h_parameters.html">
+     h-parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Communication
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../communication/communication.html">
+   Communication System
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Electromagnetics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Electromagnetic Theory
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Signal and Systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal%20system/signal_system.html">
+   Signals and Systems
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/src/electronics/emft/emft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsrc/electronics/emft/emft.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="electromagnetic-theory">
+<h1>Electromagnetic Theory<a class="headerlink" href="#electromagnetic-theory" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\Omega\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Omega = 2\pi[1-cos(\theta)]\)</span>  for a cone whose cross-section subtends the angle <span class="math notranslate nohighlight">\(2\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Omega = 4\pi\)</span>  for full sphere</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\epsilon\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu_o = 4\pi \times 10^{-7} \frac{H}{m}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\epsilon _o = 8.854187817 × 10⁻¹² \frac{F}{m}\)</span></p>
+<p><span class="math notranslate nohighlight">\(B= \mu H\)</span></p>
+<p><span class="math notranslate nohighlight">\(D = \epsilon E\)</span></p>
+</li>
+<li><p>gauss law</p>
+<ul>
+<li><p>Integral form of Gauss law</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oiint D\cdot dS = \psi _{e} \varpropto Q\)</span></p>
+</li>
+<li><p>Gauss Divergence theorem</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oiint D\cdot dS = \iiint \nabla \cdot D dV\)</span></p>
+</li>
+<li><p>Point form of Gauss Law</p>
+<p><span class="math notranslate nohighlight">\(\rho _{v} = \nabla \cdot \vec{D}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>ampere’s law</p>
+<ul>
+<li><p>Integral form of Ampere’s law</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$\displaystyle\oint \vec{H}\cdot \vec{dl} = I$
+</pre></div>
+</div>
+</li>
+<li><p>Ampere Circulation</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oint H\cdot dl = \iint (\nabla \times H) dS\)</span></p>
+</li>
+<li><p>Point form of Ampere Law</p>
+<p><span class="math notranslate nohighlight">\(\vec{J} = \nabla \times \vec{H}\)</span></p>
+</li>
+<li><p>modified ampere’s law</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oint H\cdot dl = I_c + I_d\)</span></p>
+<p><span class="math notranslate nohighlight">\(\nabla\times H = J_c+J_d\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>rate of change of any scalar with del is <code class="docutils literal notranslate"><span class="pre">gradient</span></code></p>
+<ul>
+<li><p>what is condition for path independent line integral</p>
+<p><span class="math notranslate nohighlight">\(\nabla \times A=0\)</span></p>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">solenoidal</span></code> → <span class="math notranslate nohighlight">\(\nabla . \vec F =0\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">irrotational</span></code> → <span class="math notranslate nohighlight">\(\nabla \times \vec F =0\)</span></p>
+<ul>
+<li><p>curl of gradient</p>
+<p>is always zero and its line integral is path independent</p>
+</li>
+<li><p>current density</p>
+<ul>
+<li><p>surface current</p>
+<p><span class="math notranslate nohighlight">\(K=\dfrac{I}{width}\)</span><span class="math notranslate nohighlight">\(\dfrac{ampere}{m}\)</span></p>
+</li>
+<li><p>volume current</p>
+<p><span class="math notranslate nohighlight">\(J=\dfrac{I}{S}\)</span>   <span class="math notranslate nohighlight">\(\dfrac{ampere}{m^2}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>right hand (index-middle-thumb) sequence of unit vectors</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_x \bot a_y \bot a_z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_{\rho}\bot a_{\phi} \bot a_{z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a_r \bot a_\theta \bot a_\phi\)</span></p></li>
+</ul>
+</li>
+<li><p>scaling factors</p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{c:c}
+  \color{orange} \text{parameters} &amp; \color{orange} \text {scaling\space factors} \\ \hdashline
+  \begin{array}{c:c:c} x &amp; y &amp; z \\ \hdashline \rho &amp; \phi &amp; z \\ \hdashline r &amp; \theta &amp; \phi \\ \hdashline u &amp; v &amp; w \end{array} 
+  &amp; \begin{array}{c:c:c} 1 &amp; 1 &amp; 1 \\ \hdashline 1 &amp; \rho &amp; 1 \\ \hdashline 1 &amp; r &amp; r\cdot sin(\theta) \\ \hdashline h_1 &amp; h_2 &amp; h_3 \end{array} \end{array}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\vec{dl} = (h_1du)a_u+(h_2dv)a_v+(h_3dw)a_w\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\vec{dS} = (h_2h_3dvdw)a_u+(h_3h_1dwdu)a_v+(h_1h_2dudv)a_w}\)</span></p>
+<p><span class="math notranslate nohighlight">\(dV = h_1h_2h_3dudvdw\)</span></p>
+</li>
+<li><p>divergence and curl using scaling factors</p>
+<p><span class="math notranslate nohighlight">\(\nabla\cdot A \neq A\cdot\nabla\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\nabla\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\dfrac{1}{h_1}\dfrac{\partial}{\partial u}a_u+\dfrac{1}{h_2}\dfrac{\partial}{\partial v}a_v+\dfrac{1}{h_3}\dfrac{\partial}{\partial w}a_w\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\nabla\cdot\vec{A}\)</span>  if  <span class="math notranslate nohighlight">\(\vec{A}=A_ua_u+A_va_v+A_wa_w\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\dfrac{1}{h_1h_2h_3}\Big\lbrack\dfrac{\partial (h_2h_3A_u)}{\partial u}+\dfrac{\partial(h_3h_1A_v)}{\partial v}+\dfrac{\partial(h_1h_2A_w)}{\partial w}\Big\rbrack\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\nabla\times\vec{A}\)</span>  if  <span class="math notranslate nohighlight">\(\vec{A}=A_ua_u+A_va_v+A_wa_w\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\dfrac{1}{h_1h_2h_3}\begin{vmatrix}
+   h_1a_u &amp; h_2a_v &amp; h_3a_w \\
+    \frac{\partial}{\partial u} &amp; \frac{\partial}{\partial v} &amp; \frac{\partial}{\partial w}\\ h_1A_u &amp; h_2A_v &amp; h_3A_w
+  \end{vmatrix}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\nabla ^2 G\)</span></p>
+<p><span class="math notranslate nohighlight">\(\color{skyblue}\nabla ^2 = \nabla \cdot ( \nabla G)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\nabla ^2 G =\dfrac{1}{h_1h_2h_3}\Big\lbrack\dfrac{\partial }{\partial u}\Big(\dfrac{h_2h_3}{h_1}\dfrac{\partial G}{\partial u}\Big)+\dfrac{\partial }{\partial v}\Big(\dfrac{h_1h_3}{h_2}\dfrac{\partial G}{\partial v}\Big)+\dfrac{\partial }{\partial w}\Big(\dfrac{h_1h_2}{h_3}\dfrac{\partial G}{\partial w}\Big)\Big\rbrack\)</span></p>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\int_{\theta=0}^{\theta=\pi} \int_{\phi=0}^{\phi=2\pi} sin(\theta)d\theta d\phi\)</span></p>
+<p><span class="math notranslate nohighlight">\(=4\pi\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \int_{0}^{\frac{\pi}{2}}  sin^3(\theta)d\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\dfrac{2}{3}\)</span></p>
+</li>
+<li><p>position vectors</p>
+<ul>
+<li><p>cartesian</p>
+<p><span class="math notranslate nohighlight">\(\vec{r}=x a_x +y a_y +z a_z\)</span></p>
+</li>
+<li><p>cylindrical</p>
+<p><span class="math notranslate nohighlight">\(\vec{r}=\rho a_\rho\)</span></p>
+<p><span class="math notranslate nohighlight">\(\neq \rho a_\rho + \phi a_\phi +z a_z\)</span></p>
+</li>
+<li><p>spherical</p>
+<p><span class="math notranslate nohighlight">\(\vec{r}=r a_r\)</span></p>
+<p><span class="math notranslate nohighlight">\(\neq r a_\rho + \theta a_\theta +\phi a_\phi\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>gauss law application</p>
+<ul>
+<li><p>point charge</p>
+<p><span class="math notranslate nohighlight">\(D(r)_r = \dfrac{Q}{4\pi r^2} a_r\)</span></p>
+</li>
+<li><p>hollow sphere - surface</p>
+<p><span class="math notranslate nohighlight">\(D(r) = \rho_s \frac {R^2}{r^2}\)</span>  ,  <span class="math notranslate nohighlight">\(r&gt;R\)</span></p>
+</li>
+<li><p>infinite line</p>
+<p><span class="math notranslate nohighlight">\(D=\dfrac{\rho_L}{2\pi\rho}a_\rho\)</span></p>
+</li>
+<li><p>hollow cylinder</p>
+<p><span class="math notranslate nohighlight">\(D=\dfrac{\rho_s}{\rho}R\)</span> ,   <span class="math notranslate nohighlight">\(\rho &gt; R\)</span></p>
+</li>
+<li><p>solid cylinder</p>
+<p><span class="math notranslate nohighlight">\(D=\frac{\rho_v\rho}{2}\)</span>  , <span class="math notranslate nohighlight">\(\rho&lt;R\)</span></p>
+<p><span class="math notranslate nohighlight">\(D=\frac{\rho_vR^2}{2\rho}\)</span>  , <span class="math notranslate nohighlight">\(\rho&gt;R\)</span></p>
+</li>
+<li><p>infinite sheet</p>
+<p><span class="math notranslate nohighlight">\(D=\frac{\rho_s}{2}(\pm a_N)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>ampere law application</p>
+<ul>
+<li><p>infinite wire</p>
+<p><span class="math notranslate nohighlight">\(H=\frac{I}{2\pi\rho}a_\phi\)</span></p>
+<p><span class="math notranslate nohighlight">\(a_\phi=I\times \rho\)</span></p>
+</li>
+<li><p>biot-savart law</p>
+<p><span class="math notranslate nohighlight">\(\boxed{dH = \dfrac{Idl \times a_r}{4\pi r^2} = \dfrac{KdS \times a_r}{4\pi r^2} = \dfrac{JdV \times a_r}{4\pi r^2} }\)</span></p>
+</li>
+<li><p>hollow cylinder</p>
+<p><span class="math notranslate nohighlight">\(H=\dfrac{K}{\rho}R\)</span> ,   <span class="math notranslate nohighlight">\(\rho &gt; R\)</span></p>
+</li>
+<li><p>solid cylinder</p>
+<p><span class="math notranslate nohighlight">\(H=\frac{J\rho}{2}\)</span>  , <span class="math notranslate nohighlight">\(\rho&lt;R\)</span></p>
+<p><span class="math notranslate nohighlight">\(H=\frac{JR^2}{2\rho}\)</span>  , <span class="math notranslate nohighlight">\(\rho&gt;R\)</span></p>
+</li>
+<li><p>infinite sheet</p>
+<p><span class="math notranslate nohighlight">\(H=\dfrac{K\times a_N}{2}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>un-symmetric charge</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int dD = \int \dfrac{\rho_L dl}{4\pi  r^2}a_r = \iint \frac{\rho_S dS}{4\pi  r^2}a_r = \iiint \frac{\rho_V dV}{4\pi  r^2}a_r\)</span></p>
+</li>
+<li><p>un-symmetric current</p>
+<ul>
+<li><p>finite length wire</p>
+<p><span class="math notranslate nohighlight">\(H = \dfrac{I}{4\pi \rho}[sin(\alpha_1)-sin(\alpha_2)]a_\phi\)</span></p>
+<p>(<span class="math notranslate nohighlight">\(\pm\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\pm\alpha_2\)</span> are measured from horizontal level )</p>
+</li>
+</ul>
+</li>
+<li><p>dipole</p>
+<p><span class="math notranslate nohighlight">\(torque = \vec R \times \vec F\)</span></p>
+<ul>
+<li><p>electric</p>
+<p><span class="math notranslate nohighlight">\(V=\dfrac{Q \cdot d\cdot cos(\theta)}{4\pi \epsilon r^2}\)</span></p>
+<p>can calculate E by <span class="math notranslate nohighlight">\(E = -\nabla V\)</span></p>
+</li>
+<li><p>magnetic</p>
+<p><span class="math notranslate nohighlight">\(torque = \vec M \times \vec B\)</span></p>
+<p><span class="math notranslate nohighlight">\(\vec M = \displaystyle \iint I  d\vec s\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>laplace and poisson</p>
+<p><span class="math notranslate nohighlight">\(\nabla^2V = \dfrac{-\rho_v}{\epsilon}\)</span> (poisson)</p>
+<p><span class="math notranslate nohighlight">\(\nabla ^2V = 0\)</span> (laplace)</p>
+</li>
+<li><p>vector potential</p>
+<p><span class="math notranslate nohighlight">\(\vec A = \dfrac{W}{I dl_1}=\displaystyle { \int \vec B\times \vec {dl_2} \space} \frac{weber}{m} = \frac{\mu I dl_3}{4\pi r}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\vec B = \nabla \times \vec A\)</span></p>
+</li>
+<li><p>boundary conditions of fields</p>
+<ul>
+<li><p>electric field</p>
+<p><span class="math notranslate nohighlight">\(D_{n_2} = D_{n_1}+\rho_s\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{t_1}=E_{t_2}\)</span></p>
+</li>
+<li><p>magnetic field</p>
+<p><span class="math notranslate nohighlight">\(B_{n_1}=B_{n_2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_{t_2} = H_{t_1}+\vec K\times a_N\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>maxwell’s equations</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\begin{array}{c:c}
+  \color{orange} \text{integral} &amp; \color{orange} \text {point} \\ \hdashline \oiint D\cdot dS =  Q &amp;  \nabla \cdot \vec{D}=\rho _{v} \\ \oint E\cdot dl =  0 &amp; \nabla \times \vec{E}=0 \\\oiint B\cdot dS =  0 &amp;  \nabla \cdot \vec{B}=0 \\ \oint H\cdot dl =  I &amp; \nabla \times \vec{H}=0 \end{array}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(j = e^{j90\degree}\)</span> (delay)</p>
+<ul>
+<li><p>continuity equation</p>
+<p><span class="math notranslate nohighlight">\(\nabla\cdot J = \dfrac{\partial \rho_v}{\partial t}\)</span></p>
+</li>
+<li><p>conduction and displacement current</p>
+<p><span class="math notranslate nohighlight">\(J_c = \sigma E\)</span></p>
+<p><span class="math notranslate nohighlight">\(J_d = \dfrac{\partial D}{\partial t} =\dfrac{\partial \epsilon E}{\partial t}\)</span></p>
+</li>
+<li><p>faraday law, lenz law and lorentz law</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\boxed{\nabla\times E = - \dfrac{\partial B}{\partial t}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\displaystyle\nabla\times H =  \dfrac{\partial D}{\partial t} + J_C}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oint E \cdot dl= - \iint\dfrac{\partial B}{\partial t}\cdot dS\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\oint H \cdot dl=  \iint\dfrac{\partial D}{\partial t}\cdot dS + I_C\)</span></p>
+</li>
+<li><p>helmholtz</p>
+<p><span class="math notranslate nohighlight">\(\nabla ^2 E = \gamma^2 E\)</span></p>
+<p><span class="math notranslate nohighlight">\(\nabla ^2 H = \gamma^2 H\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{{{\gamma }} = \alpha + j \beta =\sqrt {j\omega \mu \left( {\sigma + j\omega \epsilon} \right)}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^{-\gamma z} = e^{-\alpha z} e^{-j\beta z}\)</span> (amplitude and phase variations)</p>
+<p>skin depth, <span class="math notranslate nohighlight">\(\delta\)</span> = <span class="math notranslate nohighlight">\(\dfrac{1}{\alpha} =\dfrac{1}{\sigma R_S }\)</span> —→ <span class="math notranslate nohighlight">\(|E| = E_o e^{-1}\)</span></p>
+<p>loss tangent <span class="math notranslate nohighlight">\(=|\dfrac{J_c}{J_d}| = \dfrac{\sigma}{\omega \epsilon}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha = \omega \sqrt{\dfrac{\mu\epsilon}{2}(\sqrt{1+(\frac{\sigma}{\omega \epsilon} )^2}-1)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\beta = \omega \sqrt{\dfrac{\mu\epsilon}{2}(\sqrt{1+(\frac{\sigma}{\omega \epsilon} )^2}+1)}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\eta\)</span> (intrinsic impedance)</p>
+<p><span class="math notranslate nohighlight">\(\boxed{\eta = R + j X = \dfrac{E\angle \theta_1}{H\angle \theta_2} = \sqrt{\dfrac{j\omega\mu}{\sigma+j\omega\epsilon}}=\sqrt{\dfrac{\mu}{\epsilon }}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\eta_o = \sqrt{\dfrac{\mu_o}{\epsilon _o}}= 120\pi = 377\Omega\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(v_p\)</span> (phase velocity) and <span class="math notranslate nohighlight">\(v_g\)</span> (group velocity)</p>
+<p><span class="math notranslate nohighlight">\(v_p=\dfrac{\omega}{\beta}=  \dfrac{1}{\sqrt{\mu\epsilon}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\theta = \omega t = \beta z\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_g =\dfrac{d \omega}{d \overline \beta}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_g v_p =c^2\)</span></p>
+</li>
+<li><p>poynting vector</p>
+<p><span class="math notranslate nohighlight">\(P_{avg} = \dfrac{1}{2}|E\times H|=E_{rms} \times H_{rms}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle power= \iint P_{avg}\cdot dS\)</span></p>
+<p>ohmic power dissipated per unit volume : <span class="math notranslate nohighlight">\(J\cdot E = \sigma E^2   \dfrac{watts}{m}\)</span></p>
+</li>
+<li><p>reflections and transmission</p>
+<ul>
+<li><p>normal incidence</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{E^t_o}{E^i_o} = \tau\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\Gamma_E =\dfrac{E^r_o}{E^i_o} = \dfrac{\eta_2-\eta_1}{\eta_2+\eta_1} }\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\Gamma_H =\dfrac{H^r_o}{H^i_o} =\dfrac{\eta_1-\eta_2}{\eta_1+\eta_2} = -\Gamma_E }\)</span></p>
+<ul>
+<li><p>boundary conditions</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(E_{tang1}=E_{tang2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{1+\Gamma = \tau}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(H_{tang1}=H_{tang2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{1-\Gamma = \dfrac{\eta_1}{\eta_2}\tau}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>inclined incidence</p>
+<p><span class="math notranslate nohighlight">\(\theta _i=\theta _t\)</span></p>
+<ul>
+<li><p>snell’s law</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{sin(\theta_i)}{sin(\theta_t)}=\sqrt{\dfrac{\epsilon_2}{\epsilon_1}}\)</span></p>
+</li>
+<li><p>brewster’s angle</p>
+<p><span class="math notranslate nohighlight">\(tan(\theta_i) =\sqrt{\dfrac{\epsilon_2}{\epsilon_1}}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\boxed{\Gamma _S = \dfrac{\dfrac{\eta_2}{cos(\theta_t)}-\dfrac{\eta_1}{cos(\theta_i)}}{\dfrac{\eta_2}{cos(\theta_t)}+\dfrac{\eta_1}{cos(\theta_i)}}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\Gamma _P = \dfrac{\eta_2cos(\theta_t)-\eta_1{cos(\theta_i)}}{\eta_2{cos(\theta_t)}+\eta_1{cos(\theta_i)}}}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>transmission line</p>
+<p><span class="math notranslate nohighlight">\(\gamma=\sqrt{(R+j\omega L)(G+j\omega C)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Z_o =  \sqrt{\dfrac{(R+j\omega L)}{(G+j\omega C)}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Z_{series} = R+j\omega L\)</span></p>
+<p><span class="math notranslate nohighlight">\(Y_{shunt} = G+j\omega C\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\Gamma = \dfrac{Z_L - Z_o}{Z_L + Z_o}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\text{SWR} = \dfrac{1 + |\Gamma|}{1 - |\Gamma|}} = \dfrac{|V_\text{max}|}{|V_\text{min}|}= \dfrac{|I_\text{max}|}{|I_\text{min}|}\)</span></p>
+<ul>
+<li><p>standing waves</p>
+<p><span class="math notranslate nohighlight">\(2\beta x_{\text{max}} = 2n\pi +\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(2\beta x_{\text{min}} = (2n+1)\pi +\theta\)</span></p>
+</li>
+<li><p>lossless → <span class="math notranslate nohighlight">\(\alpha =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{R=G=0}\)</span></p>
+</li>
+<li><p>distortionless → <span class="math notranslate nohighlight">\(\omega \propto \beta\)</span></p>
+<p><span class="math notranslate nohighlight">\(V(t) \leftrightarrow V(x) \implies \omega t = \beta x\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\dfrac{L}{R} = \dfrac{C}{G}}\)</span></p>
+</li>
+<li><p>distortions</p>
+<ul>
+<li><p>delay distortion</p>
+<p><span class="math notranslate nohighlight">\(\beta\propto \omega\)</span></p>
+</li>
+<li><p>frequency distortion</p>
+<p><span class="math notranslate nohighlight">\(\alpha \propto \omega\)</span></p>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(Z_{in}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Z_{in} = R_o(\dfrac{Z_Lcos(\beta x)+jR_o sin(\beta x)}{R_ocos(\beta x)+jZ_L sin(\beta x)})\)</span></p>
+<p><span class="math notranslate nohighlight">\(Z_{in} = \begin{cases}
+     R_o\dfrac{Z_L +j R_o}{R_o +j Z_L} &amp; l=\dfrac{\lambda}{8} \\
+     \dfrac{R_o^2}{Z_L} &amp; l=\dfrac{\lambda}{4} \\ Z_L &amp; l=\dfrac{\lambda}{2}
+  \end{cases}\)</span></p>
+</li>
+<li><p>capacitance and inductance</p>
+<p><span class="math notranslate nohighlight">\(c=\dfrac{2\pi\epsilon l}{ln(\frac{b}{a})}\)</span> for co-axial cable</p>
+<p><span class="math notranslate nohighlight">\(c=\dfrac{\pi\epsilon l}{ln(\frac{D}{r})}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dfrac{L}{l}\cdot\dfrac{C}{l} = \mu\epsilon\)</span></p>
+</li>
+<li><p>smith chart</p>
+<p><img alt="Electromagnetic%20Theory%20d4718a13eaf9480984c7d37be18795e2/Untitled.png" src="src/electronics/emft/Electromagnetic%20Theory%20d4718a13eaf9480984c7d37be18795e2/Untitled.png" /></p>
+</li>
+</ul>
+</li>
+<li><p>antenna</p>
+<p><span class="math notranslate nohighlight">\(|E_\theta| = \dfrac{I_m}{2}\dfrac{dl}{\lambda}\dfrac{\sin \theta}{r}\eta\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_{avg} = \frac{1}{2}E_\theta H_\phi\)</span>                   <span class="math notranslate nohighlight">\(P_{total} = \oiint P_{avg} \cdot ds\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{W_r =I_{rms}^2 R_r= I_{rms}^2 80\pi^2 \Big ( \dfrac{dl}{\lambda} \Big)^2}\)</span>     ( isotropic antenna )</p>
+<p>uniform current : <span class="math notranslate nohighlight">\(dl&lt;&lt;\lambda\)</span></p>
+<ul>
+<li><p>linear current : <span class="math notranslate nohighlight">\(l \rightarrow \frac{\lambda}{10} -\frac{\lambda}{20}\)</span></p>
+<p><span class="math notranslate nohighlight">\(I_{avg} = \frac{I_o+0}{2}\)</span> → <span class="math notranslate nohighlight">\(\frac{I_{rms}^2}{4}\)</span></p>
+</li>
+<li><p>harmonic current : <span class="math notranslate nohighlight">\(l \rightarrow \frac{\lambda}{2} , \frac{\lambda}{4},\frac{\lambda}{8}\)</span></p>
+<p><span class="math notranslate nohighlight">\(I_{avg} = \dfrac{\int_0^{\pi}I_m\sin(t)dt}{\pi}=\dfrac{2I_m}{\pi}\)</span> → <span class="math notranslate nohighlight">\(\dfrac{4I_{rms}^2}{\pi^2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\lambda}{2}\)</span>  → <span class="math notranslate nohighlight">\(R_r = 80\pi^2\dfrac{4}{\pi^2}\Big(\dfrac{\frac{\lambda}{2}}{\lambda}\Big)^2 =73 \Omega\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\lambda}{4}\)</span>  → <span class="math notranslate nohighlight">\(R_r =73\Big(\dfrac{\frac{\lambda}{4}}{\frac{\lambda}{2}}\Big)= 36.5 \Omega\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\lambda}{8}\)</span>  → <span class="math notranslate nohighlight">\(R_r = 36.5\Big(\dfrac{\frac{\lambda}{8}}{\frac{\lambda}{4}}\Big)=18.25 \Omega\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_r \not\propto \frac{1}{\lambda^2}\)</span></p>
+</li>
+<li><p>fraunhofer region</p>
+<p>for practical antenna of ‘D’ dimension radiation fields are considered strong beyond</p>
+<p><span class="math notranslate nohighlight">\(r&gt; \dfrac{2D^2}{\lambda}\)</span></p>
+</li>
+<li><p>radiation intensity</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{dW_r}{dS} = P(r,\theta,\phi)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dfrac{dW_r}{d\Omega} = U(\theta,\phi)\)</span></p>
+<p><span class="math notranslate nohighlight">\(U(\theta,\phi)= P(r,\theta,\phi) r^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(dS \rightarrow r^2 \sin \theta d\theta d\phi\)</span></p>
+<p><span class="math notranslate nohighlight">\(d\Omega \rightarrow  \sin \theta d\theta d\phi\)</span></p>
+<p><span class="math notranslate nohighlight">\(dS = r^2 d\Omega\)</span></p>
+</li>
+<li><p>radiation pattern</p>
+<ul>
+<li><p>half power beam width (HPBW)</p>
+<p><span class="math notranslate nohighlight">\(\theta _{HPP_1} -\theta _{HPP_2}\)</span>  via <span class="math notranslate nohighlight">\(\theta _{max}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \theta_{HPBW} =\int_{\theta_1}^{\theta_2}\sin \theta d\theta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\phi_{HPBW}=\phi _{HPP_2} -\phi _{HPP_1}\)</span></p>
+<p>beam solid angle : <span class="math notranslate nohighlight">\(\displaystyle \Omega _A = \theta_A \times \phi _A =\int_{\theta_1}^{\theta_2}\sin \theta d\theta \times \phi_A\)</span></p>
+</li>
+<li><p>beam width first null (BWFN)</p>
+<p><span class="math notranslate nohighlight">\(\theta _{NP_1} -\theta _{NP_2}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(HPBW \approx \dfrac{BWFN}{2}\)</span> for <code class="docutils literal notranslate"><span class="pre">complex</span> <span class="pre">pattern</span></code></p>
+</li>
+<li><p>directive gain, <span class="math notranslate nohighlight">\(G_D\)</span></p>
+<p><span class="math notranslate nohighlight">\(U_{avg} = \dfrac{W_r}{4\pi}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle G_D(\theta ,\phi) = \dfrac{U(\theta ,\phi)}{U_{avg}}=\dfrac{U(\theta ,\phi)}{\Bigg(\dfrac{\int_{\theta=0}^{\pi}\int_{\phi=0}^{2\pi}U(\theta ,\phi) d\Omega}{4\pi}\Bigg)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(G_D = \dfrac{4\pi}{\Omega_A}\)</span></p>
+<ul>
+<li><p>maximum gain</p>
+<p>hertzian dipole : maximum gain = 1.5</p>
+<p>half wave dipole : maximum gain = 1.63</p>
+</li>
+</ul>
+</li>
+<li><p>antenna array</p>
+<p><span class="math notranslate nohighlight">\(E_{total} = E_o + E_o e^{j\psi}=2E_o \cos(\frac{\psi}{2})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\psi =\alpha +\beta d\cos\theta\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">end</span> <span class="pre">fire</span></code> : <span class="math notranslate nohighlight">\(\psi =0\)</span>,        <span class="math notranslate nohighlight">\(\alpha = \pm \beta d\)</span>,       <span class="math notranslate nohighlight">\(\theta_{max} =0\degree , 180\degree\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">broadside</span> <span class="pre">array</span></code> : <span class="math notranslate nohighlight">\(\psi =0\)</span>,      <span class="math notranslate nohighlight">\(\alpha =0\)</span>,      <span class="math notranslate nohighlight">\(\theta_{max} =90\degree\)</span></p>
+<ul>
+<li><p>N-element-uniform-isotropic sources</p>
+<p><span class="math notranslate nohighlight">\(E_T = E_o \dfrac{\sin(\frac{N\psi}{2})}{\sin(\frac{\psi}{2})}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\psi =0\rightarrow NE_o\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>multiplication of pattern</p>
+<p><span class="math notranslate nohighlight">\(\text{final pattern = unit pattern \)</span>\times<span class="math notranslate nohighlight">\( array factor } = U(\theta,\phi) \cos (\frac{\psi}{2})\)</span></p>
+</li>
+<li><p>friis formula</p>
+<p><code class="docutils literal notranslate"><span class="pre">capture</span> <span class="pre">area</span></code>: <span class="math notranslate nohighlight">\(G_D= \dfrac{4\pi}{\lambda^2}A_e\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{W_r=\dfrac{W_tG_tG_r}{(\frac{4\pi d}{\lambda})^2}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Big(\dfrac{4\pi d}{\lambda}\Big)^2 = L_s\)</span>  loss due to radial scattering or spreading</p>
+</li>
+<li><p>polarization loss factor</p>
+<p><span class="math notranslate nohighlight">\(PLF = |\cos \theta |^2 =|\hat{E_T}\cdot \hat{E_R}|^2\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>polarization</p>
+<ul>
+<li><p>linear</p>
+<ul class="simple">
+<li><p>single component of E</p></li>
+<li><p>2 components of E (both in phase)</p></li>
+</ul>
+</li>
+<li><p>circular</p>
+<ul class="simple">
+<li><p>2 components having equal amplitude and out of phase by <span class="math notranslate nohighlight">\(90 \degree\)</span></p></li>
+</ul>
+</li>
+<li><p>elliptical</p>
+<ul class="simple">
+<li><p>2 components of E</p>
+<ul>
+<li><p>unequal amplitude with any phase other than <span class="math notranslate nohighlight">\(0\degree / 180 \degree\)</span></p></li>
+<li><p>equal amplitude with any phase other than <span class="math notranslate nohighlight">\(0\degree/ 90\degree / 180 \degree\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>sense of rotation</p>
+<p>propagation &gt; thumb</p>
+<p>field rotation &gt; fingers</p>
+<p>which ever hand will follow the above will be rotation</p>
+</li>
+</ul>
+</li>
+<li><p>waveguide</p>
+<ul>
+<li><p>parallel plane</p>
+<p><span class="math notranslate nohighlight">\(E_{tang} =0\)</span>                    <span class="math notranslate nohighlight">\(E_{normal} =E_{max}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_{normal} =0\)</span>                <span class="math notranslate nohighlight">\(H_{tang} = H_{max}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\beta_x a = m\pi}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\beta_x^2+\overline \beta^2 = \beta ^2 = \omega^2 \mu\epsilon}\)</span></p>
+<p>cut off → <span class="math notranslate nohighlight">\(\overline \beta =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\overline \beta = \beta \cos (\theta)\)</span>                <span class="math notranslate nohighlight">\(\beta_c=\beta _x= \beta \sin (\theta)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\overline \lambda = \dfrac{\lambda}{\cos(\theta)}\)</span></p>
+</li>
+<li><p>rectangular</p>
+<p><span class="math notranslate nohighlight">\(\omega_c = \Bigg(\sqrt{\Big(\dfrac{m\pi}{a}\Big)^2 +\Big(\dfrac{n\pi}{b}\Big)^2} \Bigg) c\)</span></p>
+<p><span class="math notranslate nohighlight">\(TE_{mn}\)</span>  /<span class="math notranslate nohighlight">\(TM_{mn}\)</span> → m horizontal axis feeds and n vertical axis feeds</p>
+<p>non-existing modes in TM → <code class="docutils literal notranslate"><span class="pre">evanescent</span> <span class="pre">modes</span></code> → m = 0 / n =0</p>
+<p><code class="docutils literal notranslate"><span class="pre">dominant</span> <span class="pre">mode</span></code> → least cut off</p>
+<p><code class="docutils literal notranslate"><span class="pre">degenerate</span> <span class="pre">modes</span></code> → same cut off</p>
+<p><span class="math notranslate nohighlight">\(\eta _{TE} \text{  or  } \eta _{TM} = \dfrac{E_{transverse}}{H_{transverse}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\eta _{TE} = \dfrac{120\pi}{\sqrt{1-(\frac{f_c}{f})^2}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\eta _{TM} = 120\pi\sqrt{1-(\frac{f_c}{f})^2}\)</span></p>
+</li>
+<li><p>circular</p>
+<p><span class="math notranslate nohighlight">\(E(\rho =a) _{tang} =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(H(\rho =a)_{normal} =0\)</span></p>
+<ul>
+<li><p>TE</p>
+<p><span class="math notranslate nohighlight">\(J'_n(\beta_\rho \rho) =0\)</span> → <span class="math notranslate nohighlight">\(\beta_\rho \rho = X'_{np}\)</span>  <span class="math notranslate nohighlight">\((H_{tang} = H_{max})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\omega_c = \dfrac{X_{np}' c}{ a}}\)</span></p>
+</li>
+<li><p>TM</p>
+<p><span class="math notranslate nohighlight">\(J_n(\beta_\rho \rho) =0\)</span> → <span class="math notranslate nohighlight">\(\beta_\rho \rho = X_{np}\)</span>  <span class="math notranslate nohighlight">\((E_{tang} = 0)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\omega_c = \dfrac{X_{np} c}{ a}}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(X_{np}\)</span>  and <span class="math notranslate nohighlight">\(X'_{np}\)</span></p>
+<p><span class="math notranslate nohighlight">\(`p^{th}\)</span> root of <span class="math notranslate nohighlight">\(n^{th}\)</span> order`</p>
+<p>n = 0, 1, 2 …</p>
+<p>p = 1, 2, 3 …</p>
+<p>n → number of feeds in <span class="math notranslate nohighlight">\(\phi\)</span></p>
+<p>p → number of feeds in <span class="math notranslate nohighlight">\(\rho\)</span></p>
+<p>n=0 → <span class="math notranslate nohighlight">\(\phi=0\degree \text{ or } 180\degree\)</span></p>
+<p><span class="math notranslate nohighlight">\(TE_{n0}\)</span>  and <span class="math notranslate nohighlight">\(TM_{n0}\)</span> → <code class="docutils literal notranslate"><span class="pre">evanescent</span> <span class="pre">modes</span></code></p>
+<p><span class="math notranslate nohighlight">\(X_{11} ' = 1.84\)</span>    <span class="math notranslate nohighlight">\((TE_{11} )\)</span> → <code class="docutils literal notranslate"><span class="pre">dominant</span> <span class="pre">mode</span></code></p>
+<p><span class="math notranslate nohighlight">\(X_{01} =2.40\)</span>    <span class="math notranslate nohighlight">\((TM_{01} )\)</span>→<code class="docutils literal notranslate"><span class="pre">least</span> <span class="pre">$f_c$TM</span></code></p>
+<p><span class="math notranslate nohighlight">\(X'_{21} =3.05\)</span>    <span class="math notranslate nohighlight">\((TE_{21} )\)</span></p>
+<p><span class="math notranslate nohighlight">\(X'_{01} =X_{11} = 3.83\)</span>    <span class="math notranslate nohighlight">\((TM_{11} \text{ and } TE_{01})\)</span>→<code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">degenerate</span> <span class="pre">modes</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">any</span> <span class="pre">p</span></code> : <span class="math notranslate nohighlight">\(X'_{0p} =X_{1p}\)</span>    <span class="math notranslate nohighlight">\((TM_{1p} \text{ and } TE_{0p})\)</span>→<code class="docutils literal notranslate"><span class="pre">degenerate</span> <span class="pre">modes</span></code></p>
+</li>
+</ul>
+</li>
+<li><p>TE and TM</p>
+<ul>
+<li><p>RWG</p>
+<ul>
+<li><p>TM waves → <span class="math notranslate nohighlight">\(H_z =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_z = E_o \sin \Big(\dfrac{m\pi}{a}x\Big)\sin \Big(\dfrac{n\pi}{b}y\Big) e^{-j\overline \beta z} e^{j\omega t} a_z\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_x = C_1\dfrac{\partial E_z}{\partial x}\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_y = C_2\dfrac{\partial E_z}{\partial y}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_x = C_3 E_y\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_y = C_4 E_x\)</span></p>
+</li>
+<li><p>TE waves → <span class="math notranslate nohighlight">\(E_z =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_z = H_o \cos \Big(\dfrac{m\pi}{a}x\Big)\cos \Big(\dfrac{n\pi}{b}y\Big) e^{-j\overline \beta z} e^{j\omega t} a_z\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_x = C_1\dfrac{\partial H_z}{\partial x}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_y = C_2\dfrac{\partial H_z}{\partial y}\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_x = C_3 H_y\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_y = C_4 H_x\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>CWG</p>
+<ul>
+<li><p>TM waves → <span class="math notranslate nohighlight">\(H_z =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_z = E_o J_n(\beta_{\rho}\rho)\cos (n\phi) e^{-j\overline \beta z} e^{j\omega t} a_z\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_\rho = C_1\dfrac{\partial E_z}{\partial \rho}\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_\phi = C_2\dfrac{\partial E_z}{\partial \phi }\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_\phi  = C_3 E_\rho\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_\rho = C_4 E_\phi\)</span></p>
+</li>
+<li><p>TE waves → <span class="math notranslate nohighlight">\(E_z =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_z = H_o J_n(\beta'_{\rho}\rho)\cos (n\phi) e^{-j\overline \beta z} e^{j\omega t} a_z\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_\rho = C_1\dfrac{\partial H_z}{\partial \rho}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_\phi = C_2\dfrac{\partial H_z}{\partial \phi }\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_\phi  = C_3 H_\rho\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_\rho = C_4 H_\phi\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\electronics\emft"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../communication/communication.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Communication System</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../signal%20system/signal_system.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Signals and Systems</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By J.K. Open Source Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

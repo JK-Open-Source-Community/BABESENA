@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signals and Systems &#8212; J-Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Electromagnetic Theory" href="../emft/emft.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">J-Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   source files
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Analog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analog/analog.html">
+   Analog Circuits
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analog/h-parameters/h_parameters.html">
+     h-parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Communication
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../communication/communication.html">
+   Communication System
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Electromagnetics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../emft/emft.html">
+   Electromagnetic Theory
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Signal and Systems
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Signals and Systems
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/src/electronics/signal system/signal_system.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsrc/electronics/signal system/signal_system.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fourier-series">
+   fourier series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transforms">
+   transforms
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="signals-and-systems">
+<h1>Signals and Systems<a class="headerlink" href="#signals-and-systems" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>terminology</p>
+<ul>
+<li><p>linear</p>
+<ul>
+<li><p>system which follows principle of <code class="docutils literal notranslate"><span class="pre">superposition</span></code></p>
+<ul>
+<li><p>law of additivity</p>
+<p><span class="math notranslate nohighlight">\(x_1(t)+x_2(t) \longrightarrow \boxed{system} \longrightarrow  y_1(t)+y_2(t)\)</span></p>
+</li>
+<li><p>law of homogenity</p>
+<p><span class="math notranslate nohighlight">\(kx(t) \longrightarrow \boxed{system} \longrightarrow  ky(t)\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>time invariant</p>
+<p><span class="math notranslate nohighlight">\(x(t-t_o) \longrightarrow \boxed{system} \longrightarrow  y(t-t_o)\)</span></p>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">causal</span></code>: output of system is independent of future values of input</p>
+<p><code class="docutils literal notranslate"><span class="pre">anti-causal</span></code>: output of system depends on only future values of input</p>
+<p><code class="docutils literal notranslate"><span class="pre">static</span></code>: output of system depends on only present values of input</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynamic</span></code>: output of system depends on past or future values of input at any instant</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\delta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int _{-\infty}^{\infty}x(t) \frac{d^n}{d t^n}\delta(t-t_1) dt=(-1)^n\frac{d^n}{d t^n}x(t) \Big| _{t=t_1}\)</span> only if <span class="math notranslate nohighlight">\(x(t) \Big|_{t=\infty} = finite\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t)\delta (t-t_1) =x(t_1) \delta (t-t_1)\)</span></p>
+</li>
+<li><p>average</p>
+<p><span class="math notranslate nohighlight">\(\text{average} =\displaystyle\frac{1}{T_o} \int_{\frac{-T_o}{2}}^{\frac{T_o}{2}} x(t) dt\)</span></p>
+</li>
+<li><p>energy</p>
+<p><span class="math notranslate nohighlight">\(\rm{E=\displaystyle \int_{-\infty}^{\infty}|x(t)|^2dt}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\rm{E=\displaystyle \sum_{-\infty}^{\infty}|x[n]|^2}\)</span></p>
+</li>
+<li><p>power</p>
+<p><span class="math notranslate nohighlight">\(power =\frac{1}{T_o} \displaystyle\int_{\frac{-T_o}{2}}^{\frac{T_o}{2}}\mid x(t)\mid^2 dt = MSV(x(t))=\overline {x^2(t)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(power = \begin{cases}
+     \rm{P=\displaystyle \dfrac{1}{N} \sum_{n=N}|x[n]|^2} &amp;\text{if   periodic}  \\
+     \rm{P=\lim \limits_{x\rightarrow \infty}\displaystyle \dfrac{1}{2N+1} \sum_{n=-N}^{N}|x[n]|^2} &amp;\text{if   non-periodic}
+  \end{cases}\)</span></p>
+</li>
+<li><p>half wave symmetry</p>
+<p><span class="math notranslate nohighlight">\(x(t)=-x(t\pm \frac{T}{2})\)</span></p>
+</li>
+<li><p>conjugate symmetric</p>
+<p><span class="math notranslate nohighlight">\(x(t)=x^*(-t)\)</span></p>
+</li>
+<li><p>conjugate anti-symmetric</p>
+<p><span class="math notranslate nohighlight">\(x(t)=-x^*(-t)\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(x(t)=x_{CS}(t)+x_{CAS}(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(|A+B|^2 = |A|^2+|B|^2+AB^*+A^*B\)</span></p>
+<ul>
+<li><p>parseval’s theorem</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \boxed{E_{x(t)}=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega = \int_{-\infty}^{+\infty}|X(f)|^2df = \int_{-\infty}^{+\infty}|x(t)|^2dt}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \boxed{E_{x[n]}=\sum \limits_{n=-\infty}^{+\infty}|x[n]|^2 =\frac{1}{2\pi}\int_{-\pi}^{+\pi}|X(e^{j\omega})|^2d\omega }\)</span></p>
+</li>
+<li><p>energy of standard signals</p>
+<p><span class="math notranslate nohighlight">\(-k\cdot x(-at+b) \rightarrow \dfrac{k^2 E_x}{|a|}\)</span></p>
+<ul>
+<li><p>rectangular pulse</p>
+<p><span class="math notranslate nohighlight">\(energy=A^2\times(duration)\)</span></p>
+</li>
+<li><p>triangular pulse</p>
+<p><span class="math notranslate nohighlight">\(energy=\frac{A^2}{3}\times(duration)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>convolution</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle h(t)*x(t) = \int_{-\infty}^{\infty}x(\tau)\cdot h(t-\tau)d\tau\)</span></p>
+<ul>
+<li><p>time delay</p>
+<p><span class="math notranslate nohighlight">\(x_1(t-t_1)*x_2(t-t_2)=y(t-t_1-t_2)\)</span></p>
+</li>
+<li><p>time scaling</p>
+<p><span class="math notranslate nohighlight">\(x_1(at)*x_2(at)=\dfrac{1}{|a|}y(at)\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(x(t)*u(t) = \int _{-\infty} ^t x(\tau) d\tau\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t)*\delta(t-t_1) = x(t-t_1)\)</span></p>
+<ul>
+<li><p>area</p>
+<p><span class="math notranslate nohighlight">\(x_1(t)*x_2(t) =y(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(A_{x_1(t)} \times A_{x_2(t)} = A_{y(t)}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>sampling</p>
+<p><span class="math notranslate nohighlight">\(M_s(\omega) = f_s \sum \limits_{n=-\infty}^{\infty} M(\omega-n\omega_s)\)</span></p>
+<p><span class="math notranslate nohighlight">\(M_s(f) = f_s \sum \limits_{n=-\infty}^{\infty} M(f-nf_s)\)</span></p>
+<ul>
+<li><p>no aliasing</p>
+<p><span class="math notranslate nohighlight">\(f_s \ge 2f_m\)</span></p>
+</li>
+<li><p>filter cutoff</p>
+<p><span class="math notranslate nohighlight">\(f_m \le f_c \le f_s-f_m\)</span></p>
+</li>
+<li><p>nyquist</p>
+<p><span class="math notranslate nohighlight">\(NR=f_{NY} = 2 f_{max} = (f_s) _{min}\)</span></p>
+<p><span class="math notranslate nohighlight">\(NI =T_{NY}=\dfrac{1}{f_{NY}}\)</span></p>
+</li>
+<li><p>rectangular</p>
+<p><span class="math notranslate nohighlight">\(M_s(f) = \sum \limits_{n=-\infty}^{\infty}\frac{2A}{a}sinc(\frac{2n}{a}) M(f-nf_s)\)</span></p>
+</li>
+<li><p>bandpass sampling theorem</p>
+<p><span class="math notranslate nohighlight">\(f_s \ge \dfrac{2f_H}{k}\)</span></p>
+<p><span class="math notranslate nohighlight">\(k=\Big[\dfrac{f_H}{f_H-f_L}\Big]\)</span>                   <span class="math notranslate nohighlight">\([\cdot]\)</span> → GIF</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="fourier-series">
+<h2>fourier series<a class="headerlink" href="#fourier-series" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>dirichlet conditions</p>
+<ul class="simple">
+<li><p>signal must have finite number of maxima and minima over the range of time period.</p></li>
+<li><p>signal must have a finite number of discontinuities over the range of time period.</p></li>
+<li><p>signal must be absolutely integrable over a period.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\color{lightgreen} x(t)=a_o+\sum_{n=1} ^{\infty}a_n cos(n\omega_ot)+\sum_{n=1} ^{\infty}b_n sin(n\omega_ot)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle a_o=\frac{1}{T_o}\int_{T_o} x(t) dt\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle a_n=\frac{2}{T_o}\int_{T_o} x(t) cos(n\omega_ot) dt\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle b_n=\frac{2}{T_o}\int_{T_o} x(t) sin(n\omega_ot) dt\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x(t)=\sum\limits_{n=-\infty}^{\infty} C_n e^{jn\omega_ot}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle C_n=\frac{1}{T_o} \int _{T_o} x(t) e^{-jn\omega_o t}dt\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle C^{*}_{-n}=\frac{1}{T_o} \int _{T_o} x^*(t) e^{-jn\omega_o t}dt\)</span></p>
+<ul>
+<li><p>properties</p>
+<ul>
+<li><p>conjugation</p>
+<p><span class="math notranslate nohighlight">\(x^*(t) \longleftrightarrow C_{-n} ^*\)</span></p>
+</li>
+<li><p>time reversal</p>
+<p><span class="math notranslate nohighlight">\(x(-t) \longleftrightarrow C_{-n}\)</span></p>
+</li>
+<li><p>time scaling</p>
+<p><span class="math notranslate nohighlight">\(x(at) \longleftrightarrow C_{n}\)</span>  but period = <span class="math notranslate nohighlight">\(\dfrac{T_o}{a}\)</span></p>
+</li>
+<li><p>time shifting</p>
+<p><span class="math notranslate nohighlight">\(x(t+t_o) \longleftrightarrow e^{+jn\omega_o t_o}C_{n}\)</span></p>
+</li>
+<li><p>frequency shifting</p>
+<p><span class="math notranslate nohighlight">\(x(t+t_o)e^{\pm jm\omega_o t_o} \longleftrightarrow C_{n\mp m}\)</span></p>
+</li>
+<li><p>convolution in time</p>
+<p><span class="math notranslate nohighlight">\(x_1(t)*x_2(t) \longleftrightarrow T_o(C_{1n}\cdot C_{2n} )\)</span></p>
+</li>
+<li><p>multiplication in time</p>
+<p><span class="math notranslate nohighlight">\(x_1(t)\cdot x_2(t) \longleftrightarrow C_{1n}* C_{2n}\)</span></p>
+</li>
+<li><p>differentiation in time</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{d^kx(t)}{dt^k} \longleftrightarrow (jn\omega_o)^kC_{n}\)</span></p>
+</li>
+<li><p>integration in time</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \int_{-\infty}^{t} x(\tau) d\tau  \longleftrightarrow \dfrac{C_{n}}{jn\omega_o}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="transforms">
+<h2>transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>laplace transform</p>
+<ul>
+<li><p>bilateral</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle F(s)=\int_{-\infty}^{+\infty}f(t)e^{-st}dt\)</span></p>
+</li>
+<li><p>unilateral</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle  F(s)=\int_{0}^{\infty}f(t)e^{-st}dt\)</span></p>
+</li>
+<li><p>properties</p>
+<ul>
+<li><p>conjugation</p>
+<p><span class="math notranslate nohighlight">\(f^*(t)\leftrightarrow F^*(s^*)\)</span></p>
+</li>
+<li><p>time reversal</p>
+<p><span class="math notranslate nohighlight">\(f(-t)\leftrightarrow F(-s)\)</span></p>
+</li>
+<li><p>time scaling</p>
+<p><span class="math notranslate nohighlight">\(f(at)\leftrightarrow\frac{1}{\mid a \mid}F(\frac{s}{a})\)</span></p>
+</li>
+<li><p>time shifting</p>
+<p><span class="math notranslate nohighlight">\(f(t\pm t_0)\leftrightarrow F(s)e^{\pm st_0}\)</span></p>
+</li>
+<li><p>frequency shifting</p>
+<p><span class="math notranslate nohighlight">\(e^{\pm s_0 t}f(t) \leftrightarrow F(s\mp s_0)\)</span></p>
+</li>
+<li><p>convolution in time</p>
+<p><span class="math notranslate nohighlight">\(f_1(t)*f_2(t)\leftrightarrow F_1(s)\times F_2(s)\)</span></p>
+</li>
+<li><p>convolution in frequency</p>
+<p><span class="math notranslate nohighlight">\(f_1(t)\times f_2(t)\leftrightarrow \frac{1}{2\pi j}\lbrack F_1(s)*F_2(s) \rbrack\)</span></p>
+</li>
+<li><p>differentiation in time</p>
+<ul>
+<li><p>bilateral</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{d^n}{dt^n}f(t) \leftrightarrow s^nF(s)\)</span></p>
+</li>
+<li><p>unilateral</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{d^n}{dt^n}f(t) \leftrightarrow s^nF(s)- s^{n-1}f(0^-)-s^{n-2}f'(0^-)-...\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>integration in time</p>
+<ul>
+<li><p>bilateral</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \int_{-\infty}^tf(\tau)d\tau \leftrightarrow \frac{F(s)}{s}\)</span></p>
+</li>
+<li><p>unilateral</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int_{-\infty}^tf(\tau)d\tau \leftrightarrow \frac{F(s)}{s} + \frac{\int_{-\infty}^{0^-}f(\tau)d\tau }{s}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>differentiation in frequency</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle t^nf(t) \leftrightarrow  (-1)^{n}\frac{d^n}{ds^n}F(s)\)</span></p>
+</li>
+<li><p>integration in frequency</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\frac{f(t)}{t} \leftrightarrow  \int_{s}^\infty F(s)d\tau\)</span></p>
+</li>
+<li><p>initial value theorem</p>
+<p><span class="math notranslate nohighlight">\(f(0^+)=\underset{s\rightarrow\infty}{lim}\space sF(s)\)</span></p>
+<p>note : initial value theorem is applied only on remainder function</p>
+</li>
+<li><p>final value theorem</p>
+<p><span class="math notranslate nohighlight">\(f(\infty)=\underset{s\rightarrow0}{lim}\space sF(s)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>standard results</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\delta(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\delta \leftrightarrow 1\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(u(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(u(t)\leftrightarrow \frac{1} {s}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(t^nu(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(t^nu(t) \longleftrightarrow  \dfrac{n!}{s^{n+1}}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(cos(\omega_o t)u(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(cos(\omega_o t)u(t)\leftrightarrow \dfrac{s} {s^2+\omega_o^2}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(sin(\omega_o t)u(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(sin(\omega_o t)u(t)\leftrightarrow \dfrac{\omega_o} {s^2+\omega_o^2}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>fourier transform</p>
+<p><span class="math notranslate nohighlight">\(\rm{X\left(j\omega\right)=\displaystyle \int \limits_{ - \infty }^\infty {x(t)e^{-j\omega t}}dt}\)</span> (CTFT)</p>
+<p><span class="math notranslate nohighlight">\(\rm{x\left(t\right)=\dfrac{1}{2\pi}\displaystyle \int \limits_{ - \infty }^\infty {X(j\omega)e^{j\omega t}}d\omega}\)</span> (inverse CTFT)</p>
+<p><span class="math notranslate nohighlight">\(\rm{X\left(e^{j\omega}\right)=\displaystyle \sum \limits_{ - \infty }^\infty {x[n]e^{-j\omega n}}}\)</span> (DTFT)</p>
+<p><span class="math notranslate nohighlight">\(\rm{x\left[n\right]=\dfrac{1}{2\pi}\displaystyle \int \limits_{ - \pi }^\pi {X(j\omega)e^{j\omega n}}d\omega}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{z-transform} \xleftrightarrow{z=e^{j\omega}} \text{DTFT}\)</span></p>
+<ul>
+<li><p>duality</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(x(t) \leftrightarrow X(\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{X(t) \leftrightarrow 2\pi x(-\omega)}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x(t) \leftrightarrow X(f)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{X(t) \leftrightarrow x(-f)}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>modulation</p>
+<p><span class="math notranslate nohighlight">\(x(t)\cdot cos(\omega_ot) \leftrightarrow \dfrac{2\pi}{2} [X(\omega-\omega_o)+X(\omega+\omega_o)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{x(t)\cdot cos(\omega_ot) \leftrightarrow \frac{1}{2} [X(f-f_o)+X(f+f_o)]}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t)\cdot sin(\omega_ot) \leftrightarrow \dfrac{2\pi }{2j} [X(\omega-\omega_o)-X(\omega+\omega_o)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t)\cdot sin(\omega_ot) \leftrightarrow \dfrac{1}{2j} [X(f-f_o)-X(f+f_o)]\)</span></p>
+</li>
+<li><p>sinc</p>
+<p><span class="math notranslate nohighlight">\(Sa(bt)=\dfrac{sin(bt)}{bt}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dfrac{sin(at)}{bt}=\dfrac{a}{b}sinc(\dfrac{at}{\pi})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{A\cdot rect(\frac{t}{T}) \longleftrightarrow AT\cdot Sa(\frac{\omega T}{2})}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{A\cdot tri(\frac{t}{T}) \longleftrightarrow  AT\cdot Sa^2(\frac{\omega T}{2})}\)</span></p>
+<p><img alt="Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled.png" src="src/electronics/signal system/Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled.png" /></p>
+<p><img alt="Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled%201.png" src="src/electronics/signal system/Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled%201.png" /></p>
+<p><img alt="Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389438409.jpg327925182995849076.jpg" src="src/electronics/signal system/Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389438409.jpg327925182995849076.jpg" /></p>
+<p><img alt="Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389412025.jpg5743089408707252573.jpg" src="src/electronics/signal system/Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389412025.jpg5743089408707252573.jpg" /></p>
+</li>
+<li><p>properties</p>
+<ul>
+<li><p>time shifting</p>
+<p><span class="math notranslate nohighlight">\(x(t\pm t_0)\leftrightarrow X(j\omega)e^{\pm j\omega t_0}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x[n\pm n_0]\leftrightarrow X(e^{j\omega})e^{\pm j\omega n_0}\)</span></p>
+</li>
+<li><p>frequency shifting</p>
+<p><span class="math notranslate nohighlight">\(e^{\pm j\omega_0 t}x(t)\leftrightarrow X[j(\omega\mp\omega)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^{\pm j\omega_0 t}x[n]\leftrightarrow X(e^{j (\omega\mp\omega)})\)</span></p>
+</li>
+<li><p>conjugation</p>
+<p><span class="math notranslate nohighlight">\(x^*[n]\leftrightarrow X^*(e^{-j\omega})\)</span></p>
+</li>
+<li><p>time reversal</p>
+<p><span class="math notranslate nohighlight">\(x[-n] \leftrightarrow X(e^{-j\omega})\)</span></p>
+</li>
+<li><p>area under <span class="math notranslate nohighlight">\(x(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(X(0)=\displaystyle\int_{-\infty}^{\infty}x(t)dt\)</span></p>
+</li>
+<li><p>area under <span class="math notranslate nohighlight">\(X(j\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(2\pi\cdot x(0)=\displaystyle\int_{-\infty}^{\infty}X(j\omega)d\omega\)</span></p>
+</li>
+<li><p>differentiation in frequency</p>
+<p><span class="math notranslate nohighlight">\(t^nx(t) \leftrightarrow  j\frac{d^n}{d\omega^n}X(j\omega)\)</span></p>
+</li>
+<li><p>differentiation in time</p>
+<p><span class="math notranslate nohighlight">\(\frac{d^n}{dt^n}x(t) \leftrightarrow  (j \omega)^nX(j\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(x[n]-x[n-1] \leftrightarrow  (1-e^{-j\omega}) X(e^{j\omega})\)</span></p>
+</li>
+<li><p>integration/accumulation in time</p>
+<p><span class="math notranslate nohighlight">\(\int _{-\infty} ^{t} x(\tau)d\tau \leftrightarrow \frac{X(j\omega)}{j\omega} + \pi X(0) \delta (\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=-\infty} ^n x[k] \leftrightarrow  \dfrac{X[e^{j\omega}]}{1-e^{-j\omega}}  + \pi X(e^{j0}) \sum_{k=-\infty} ^\infty\delta (\omega-2\pi k )\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x(t) \leftrightarrow X(\omega) \space pairs\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{c:c}
+  \color{orange} {x(t)} &amp; \color{orange}  {X(\omega)} \\ \hdashline
+   R &amp; CS \\ CS &amp; R \\ I &amp; CAS \\ CAS &amp; I \\ R+E &amp; R+E \\ I+E &amp; I+E \\ R+O &amp; I+O \\ I+O &amp; R+O 
+  &amp;  \end{array}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{c:c}
+  \color{orange} {x(t)} &amp; \color{orange}  {X(\omega)} \\ \hdashline
+   continuous  &amp; NP \\ NP &amp; continuous \\ discreate &amp; P \\ P &amp; discreate \\ continuous +P &amp; discreate +NP \\ continuous + NP &amp; continuous + NP \\ discreate+P &amp; discreate+P \\ discreate+NP &amp; continuous+P    \end{array}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>standard results</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(e^{-at}u(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^{-at}u(t) \longleftrightarrow \dfrac{1}{a+j\omega}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(e^{-a|t|}\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^{-a|t|} \longleftrightarrow \dfrac{2a}{a^2+\omega^2}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(e^{-a t^2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^{-a t^2} \longleftrightarrow \sqrt{\dfrac{\pi}{a}}e^{-\frac{\omega^2}{4a}}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(u(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(u(t) \longleftrightarrow \dfrac{1}{j\omega} + \pi\delta(\omega)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(u[n]\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{a^nu[n] \longleftrightarrow  \dfrac{1}{1-ae^{-j\omega}} }\)</span> ,   |a| &lt; 1</p>
+<p><span class="math notranslate nohighlight">\(u[n] \longleftrightarrow  \dfrac{1}{1-e^{-j\omega}}  + \pi \sum\limits_{k=-\infty} ^\infty\delta (\omega-2\pi k )\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>z-transform</p>
+<p><span class="math notranslate nohighlight">\(X[z] \longleftrightarrow \sum \limits_{ n=- \infty }^\infty x[n] z^{-n}\)</span></p>
+<ul>
+<li><p>properties</p>
+<ul>
+<li><p>time shifting</p>
+<p><span class="math notranslate nohighlight">\(x[n-n_o]\leftrightarrow  z^{-n_o} X[z]\)</span></p>
+</li>
+<li><p>time scaling</p>
+<p><span class="math notranslate nohighlight">\(x[\frac{n}{m}]\leftrightarrow X[z^m]\)</span>               ROC : <span class="math notranslate nohighlight">\(R^{\frac{1}{m}}\)</span></p>
+</li>
+<li><p>time reversal</p>
+<p><span class="math notranslate nohighlight">\(x[-n] \leftrightarrow X[z^{-1}]\)</span>             ROC : <span class="math notranslate nohighlight">\(R^{-1}\)</span></p>
+</li>
+<li><p>scaling of z (exponential sequence property)</p>
+<p><span class="math notranslate nohighlight">\(a^n x[n] \leftrightarrow  X[\frac{z}{a}]\)</span>           ROC : <span class="math notranslate nohighlight">\(|a| R\)</span></p>
+</li>
+<li><p>conjugation</p>
+<p><span class="math notranslate nohighlight">\(x^*[n] \leftrightarrow  X^* [z^*]\)</span>         ROC : R</p>
+</li>
+<li><p>accumulation</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\sum_{k=-\infty} ^n x[k] \leftrightarrow  \dfrac{X[z]}{1-z^{-1}}\)</span>           ROC <span class="math notranslate nohighlight">\(&gt; R \cap |z|&gt;1\)</span></p>
+</li>
+<li><p>convolution in time</p>
+<p><span class="math notranslate nohighlight">\(x_1[n]*x_2[n]  \leftrightarrow  X_1[z]\cdot X_2[z]\)</span></p>
+</li>
+<li><p>multiplication in time</p>
+<p><span class="math notranslate nohighlight">\(x_1[n]\cdot x_2[n] \leftrightarrow  \dfrac{1}{2\pi j} \{ X_1[z] *X_2[z] \}\)</span></p>
+</li>
+<li><p>differentiation in time</p>
+<p><span class="math notranslate nohighlight">\(x[n]-x[n-1] \leftrightarrow  (1-z^{-1}) X[z]\)</span></p>
+</li>
+<li><p>differentiation in z-domain</p>
+<p><span class="math notranslate nohighlight">\(n\cdot x[n] \leftrightarrow  -z \dfrac{d X[z]}{dz}\)</span></p>
+</li>
+<li><p>initial value theorem</p>
+<p><span class="math notranslate nohighlight">\(x[n] _{n=0} = \lim \limits_{z\rightarrow \infty} X[z]\)</span></p>
+<p>condition : <span class="math notranslate nohighlight">\(x[n]=0, n&lt;0\)</span></p>
+</li>
+<li><p>final value theorem</p>
+<p><span class="math notranslate nohighlight">\(\lim \limits_{n\rightarrow \infty} x[n] \leftrightarrow  \lim \limits_{z\rightarrow 1} \{ (1-z^{-1})X[z]\}\)</span></p>
+<p>condition 1 : <span class="math notranslate nohighlight">\(x[n]=0, n&lt;0\)</span></p>
+<p>condition 2 :  <span class="math notranslate nohighlight">\((1-z^{-1})X[z]\)</span> should have poles inside unit circle in z-plane</p>
+</li>
+</ul>
+</li>
+<li><p>standard results</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(u[n]\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{a^nu[n] \longleftrightarrow  \dfrac{1}{1-az^{-1}} }\)</span> ,                   |a| &lt; 1</p>
+<p><span class="math notranslate nohighlight">\(\boxed{-a^nu[-n-1] \longleftrightarrow  \dfrac{1}{1-az^{-1}} }\)</span> ,     |a| &gt; 1</p>
+<p><span class="math notranslate nohighlight">\(u[n] \longleftrightarrow  \dfrac{1}{1-z^{-1}}\)</span>                                 |z|&gt;1</p>
+<p><span class="math notranslate nohighlight">\(-u[-n-1] \longleftrightarrow  \dfrac{1}{1-z^{-1}}\)</span>                   |z|&lt;1</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\electronics\signal system"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../emft/emft.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Electromagnetic Theory</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By J.K. Open Source Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
