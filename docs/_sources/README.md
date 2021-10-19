@@ -7,3 +7,5 @@
 
 pip install -U jupyter-book
 jupyter-book build .
+
+ manually place all content of `_build/html` into `docs` or run `python build.py` in terminal
