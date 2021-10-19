@@ -6,4 +6,4 @@
 
 
 pip install -U jupyter-book
-pip install sphinx-togglebutton
+jupyter-book build .
