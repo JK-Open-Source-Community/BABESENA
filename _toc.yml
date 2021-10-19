@@ -4,6 +4,12 @@
 format: jb-book
 root: src/README.ipynb
 parts:
+
+  - caption: Mathematics and Aptitude
+    chapters:
+    - file: src/mathematics-aptitude/maths
+    - file: src/mathematics-aptitude/aptitude
+
   - caption: Analog
     chapters:
     - file: src/electronics/analog/analog
@@ -20,4 +26,4 @@ parts:
   
   - caption: Signal and Systems
     chapters:
-    - file : src/electronics/signal system/signal_system
+    - file : src/electronics/signal-system/signal_system

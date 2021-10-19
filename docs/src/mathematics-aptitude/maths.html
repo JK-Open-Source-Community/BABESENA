@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematics &#8212; J-Book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="aptitude.html" />
+    <link rel="prev" title="Home" href="../README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">J-Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Mathematics and Aptitude
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Mathematics
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Analog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electronics/analog/analog.html">
+   Analog Electronics and Circuits
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electronics/analog/h-parameters/h_parameters.html">
+     h-parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Communication
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electronics/communication/communication.html">
+   Communication System
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Electromagnetics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electronics/emft/emft.html">
+   Electromagnetic Theory
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Signal and Systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electronics/signal-system/signal_system.html">
+   Signals and Systems
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/src/mathematics-aptitude/maths.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JK-Open-Source-Community/babesena"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/JK-Open-Source-Community/babesena/issues/new?title=Issue%20on%20page%20%2Fsrc/mathematics-aptitude/maths.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="mathematics">
+<h1>Mathematics<a class="headerlink" href="#mathematics" title="Permalink to this headline">¶</a></h1>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Calculus<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\int udv = u\cdot v-\int du\cdot v\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle\Gamma(n)=\int_{0}^{\infty}x^{n-1}e^{-x}dx=(n-1)!\)</span></p>
+<ul>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(cos ^2(i\theta)+sin^2(i\theta) = cosh^2(\theta)- sinh^2(\theta)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(cos(i\theta) = cosh(\theta)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(sin(i\theta) = i\cdot sinh(\theta)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(sin(x) = \dfrac{e^{jx}-e^{-jx}}{2j}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(sinh(x) = \dfrac{e^{x}-e^{-x}}{2}\)</span></p>
+</li>
+</ul>
+<p class="card-text"><span class="math notranslate nohighlight">\(2\cos \alpha \cos \beta= \cos(\alpha-\beta)+\cos(\alpha+\beta)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(2\sin \alpha \cos \beta=  \sin(\alpha+\beta)+\sin(\alpha-\beta)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(2\sin \alpha \sin \beta =  \cos(\alpha-\beta)-\cos(\alpha+\beta)\)</span></p>
+<ul>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\dfrac{sin(x)}{x}\)</span></p>
+<p class="card-text">zero-crossovers : <span class="math notranslate nohighlight">\(x=K \pi\)</span>, <span class="math notranslate nohighlight">\(K \in I - \{0\}\)</span></p>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(e^{-1}\)</span></p>
+<p class="card-text">=0.3678</p>
+</li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Complex Analysis<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(e^{j2\pi k}e^{j\theta} = e^{j\theta}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(i^n+i^{n+1}+i^{n+2}+i^{n+3}=0\)</span></p>
+<ul>
+<li><p class="card-text">root of unity</p>
+<p class="card-text">sum of ‘n’ roots of unity = 0</p>
+<p class="card-text">product of ‘n’ roots of unity = <span class="math notranslate nohighlight">\((-1)^{n-1}\)</span></p>
+</li>
+<li><p class="card-text">CR equation</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(f'(z_o) = u_x +i v_x=v_y-iu_y=e^{-i\theta}(u_r + iv_r)\)</span></p>
+<ul>
+<li><p class="card-text">cartesian</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(u_x=v_y \\ v_x = -u_y\)</span></p>
+</li>
+<li><p class="card-text">polar</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(u_r=\frac{1}{r}v_{\theta} \\ v_r=-\frac{1}{r}u_{\theta}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p class="card-text">milne thompson method</p></li>
+<li><p class="card-text">residue theorem</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">singular</span> <span class="pre">point</span></code> → point where complex function becomes non-analytic</p>
+<p class="card-text">laurent series around singularity: <span class="math notranslate nohighlight">\(f(z) = \sum \limits _{n=0}^{\infty} a_{n} (z-a)^{n} +\sum \limits _{m=1}^{\infty} b_{-m} (z-a)^{-m}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle \int_C f (z) dz = 2 \pi i \cdot\text{(sum of residues at the singular points within \)</span>z_o<span class="math notranslate nohighlight">\( )}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\text{residue}(f(z_o))=\text{coefficient of \)</span>(z-a)^{-1}<span class="math notranslate nohighlight">\(}=\lim \limits_{z\rightarrow z_o} \dfrac{1}{(n-1)!}\Big[ \dfrac{d^{n-1}}{dz^{n-1}}[(z-z_o)^nf(z)]\Big]\)</span></p>
+</li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+ODE<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">order → highest order derivative</p>
+<p class="card-text">degree → degree of highest order differential coefficient provided equation is <code class="docutils literal notranslate"><span class="pre">polynomial</span> <span class="pre">in</span> <span class="pre">all</span> <span class="pre">differential</span> <span class="pre">coefficients</span></code></p>
+<ul>
+<li><p class="card-text">integration and differentiation</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle \int \dfrac{1}{\sqrt{x^2+a^2}} dx = \sin^{-1} \Big(\frac{x}{a}\Big) + C\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle \int \dfrac{1}{\sqrt{x^2-a^2}} dx = \cos^{-1} \Big(\frac{x}{a}\Big) + C\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle \int \dfrac{1}{x^2-a^2} dx = \dfrac{1}{a}\tan^{-1} \Big(\frac{x}{a}\Big) + C\)</span></p>
+</li>
+<li><p class="card-text">variable separable</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(f(x) dx +g(y)dy =0\)</span></p>
+</li>
+<li><p class="card-text">exact differential equation</p>
+<p class="card-text"><span class="math notranslate nohighlight">\({M\left( {x,y} \right)dx + N\left( {x,y} \right)dy }= 0\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\dfrac{{\partial M}}{{\partial x}} = \dfrac{{\partial N}}{{\partial y}}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle\int dv = \int_\text{y = const} Mdx +  \int_\text{\text{independent of x}} Ndy\)</span></p>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\dfrac{dy}{dx}+p(x)y=r(x)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle y e^{-\int p(x) dx }  =  \Big[\int r(x)e^{\int p(x) dx } dx +C \Big]\)</span></p>
+</li>
+<li><p class="card-text">LDE of higher order</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(y=CF+PI\)</span></p>
+<ul>
+<li><p class="card-text">CF</p>
+<p class="card-text">CF is solution of <span class="math notranslate nohighlight">\((D^n +a_1D^{n-1}+\dots +k_nD^0)y=0\)</span></p>
+<p class="card-text">if roots are <code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">and</span> <span class="pre">distinct</span></code> : <span class="math notranslate nohighlight">\(y =c_1e^{m_1x}+c_2e^{m_2x}\)</span></p>
+<p class="card-text">if roots are <code class="docutils literal notranslate"><span class="pre">real</span> <span class="pre">and</span> <span class="pre">equal</span></code> : <span class="math notranslate nohighlight">\(y =(c_1+c_2x)e^{mx}\)</span></p>
+<p class="card-text">if roots are <code class="docutils literal notranslate"><span class="pre">complex</span> <span class="pre">conjugate</span></code>: <span class="math notranslate nohighlight">\(y =(c_1\cos(\beta x)+c_2sin(\beta x))e^{\alpha x}\)</span></p>
+</li>
+<li><p class="card-text">PI</p>
+<p class="card-text">PI is solution of <span class="math notranslate nohighlight">\((D^n +a_1D^{n-1}+\dots +k_nD^0)y=x\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Linear Algebra<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul>
+<li><p class="card-text">rank</p>
+<p class="card-text">atleast one minor of A of order r doesn’t vanish → rank(A) = r</p>
+</li>
+<li><p class="card-text">eigen vectors</p>
+<p class="card-text"><span class="math notranslate nohighlight">\([A] [X] =\lambda [X]\)</span></p>
+</li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Probability<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul>
+<li><p class="card-text">binomial distribution</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\mu = np\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\sigma ^2 = npq\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle P(r)= \binom{n}{r} p^r q^{n-r}\)</span></p>
+</li>
+</ul>
+</div>
+</details></div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\mathematics-aptitude"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Home</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="aptitude.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">&lt;no title&gt;</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By J.K. Open Source Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
