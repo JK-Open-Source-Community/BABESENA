@@ -5,6 +5,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/JK-Open-Source-Community/TeXeD?style=social)](https://github.com/JK-Open-Source-Community/TeXeD/stargazers)
 
 
+https://jk-open-source-community.github.io/BABESENA/docs/index.html
+
 pip install -U jupyter-book
 jupyter-book build .
 

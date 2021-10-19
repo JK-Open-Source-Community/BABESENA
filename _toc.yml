@@ -2,15 +2,22 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: analog
+root: src/README.ipynb
 parts:
   - caption: Analog
     chapters:
-    - file: analog/analog
+    - file: src/electronics/analog/analog
       sections:
-      - file: analog/h-parameters/h_parameters
+      - file: src/electronics/analog/h-parameters/h_parameters
   
   - caption: Communication
     chapters:
-    - file : communication/communication
+    - file : src/electronics/communication/communication
+
+  - caption: Electromagnetics
+    chapters:
+    - file : src/electronics/emft/emft
   
+  - caption: Signal and Systems
+    chapters:
+    - file : src/electronics/signal system/signal_system

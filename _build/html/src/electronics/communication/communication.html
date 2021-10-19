@@ -1,0 +1,977 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication System &#8212; J-Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Electromagnetic Theory" href="../emft/emft.html" />
+    <link rel="prev" title="h-parameters" href="../analog/h-parameters/h_parameters.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">J-Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   source files
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Analog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analog/analog.html">
+   Analog Circuits
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analog/h-parameters/h_parameters.html">
+     h-parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Communication
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Communication System
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Electromagnetics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../emft/emft.html">
+   Electromagnetic Theory
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Signal and Systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal%20system/signal_system.html">
+   Signals and Systems
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/src/electronics/communication/communication.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsrc/electronics/communication/communication.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analog-communication">
+   analog communication
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="communication-system">
+<h1>Communication System<a class="headerlink" href="#communication-system" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int _{-\infty}^{\infty}ae^{-b|x|}dx=\dfrac{2a}{b}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int _{0}^{\infty}e^{-x^2}dx=\dfrac{\sqrt{\pi}}{2}\)</span></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+terminology<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">baseband</span> <span class="pre">signal</span> <span class="pre">or</span> <span class="pre">lowpass</span> <span class="pre">signal</span></code> include frequencies that are very near zero, by comparison with its highest frequency</p>
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">band</span> <span class="pre">pass</span> <span class="pre">signal</span></code>  a band of frequencies ranging from some non zero value to another non zero value</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+q function<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight">
+\[ Q(x) = \dfrac{1}{\sqrt{2\pi}} \displaystyle\int_x ^{\infty} e^{\frac{-z^2}{2}}dz \]</div>
+<p class="card-text"><span class="math notranslate nohighlight">\(Q(x)+Q(-x)=1\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(Q(-\infty)=1\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(Q(\infty)=0\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+CDF<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(F_X(x) = P(X\leq x) = 1-P(X&gt;x)\)</span></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+properties of CDF<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(0\le F_X(x)\le1\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(F_X(\infty)=P(X\le \infty)=1\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(F_X(-\infty)=P(X\le - \infty)=0\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(F_X(-\infty)+F_X(\infty)=1\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(F_X(x)\)</span> is non-decreasing function of x</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+graph of CDF is continuous from right at a point x=a <div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\( F_X(a)=F_X(a^{+}) \)</span></p>
+</div>
+</details></div>
+</details></div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+range calculations   <div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\color{green}{F_X(b^+)-F_X(a^+)=P(a&lt;X\le b)}\)</span><br />
+change inequalities according to <span class="math notranslate nohighlight">\(b^{\pm}\)</span> and <span class="math notranslate nohighlight">\(a^{\pm}\)</span>
+<span class="math notranslate nohighlight">\(\color{green}  P(X=a) =F_X(a^+)-F_X(a^-)\)</span> = size of jump</p>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+PDF<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight">
+\[f_X(x) = \dfrac{d}{dx}F_X(x)\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+properties of PDF<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(f_X(x)\ge0\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(F_X(\infty)=\int_{-\infty}^{\infty}f_X(x)dx=1\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\color{lightgreen}F_X(x)=P(X\le x)=P(-\infty &lt;X\le x)=\color{skyblue}\int_{-\infty}^{x}f_X(x)dx\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\color{green} P(a &lt;X\le b)=\int_{a^+}^{b^+}f_X(x)dx\)</span></p></li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(P(X=a) =\int_{a^-}^{a^+}f_X(x)dx\)</span></p></li>
+</ol>
+</div>
+</details></div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+PMF<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(p_X(x_i)=P(X=x_i)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(f_X(x)=\sum_i p_X(x_i)\delta(x-x_i)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(F_X(x)=\sum_i p_X(x_i)u(x-x_i)\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+joint probability<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(P(\frac{A}{B})=\frac{P(A\cap B)}{P(B)}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(P(A\cap B)=P(\frac{A}{B})P(B)=P(\frac{B}{A})P(A)\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+statistical parameters<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(r^{th}\)</span> order moment of X = <span class="math notranslate nohighlight">\(E(X^r)\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(r^{th}\)</span> order central moment of X = <span class="math notranslate nohighlight">\(E[(X-\mu_X)^r]\)</span></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+expectation operator<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle  E[X]=\int _{-\infty}^{\infty}xf_X(x)dx\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\boxed{\displaystyle E[g(x)]=\int _{-\infty}^{\infty}g(x)f_X(x)dx}\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(E[g(x)]=\sum _{i} g(x_i)P[X=x_i]\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(E[aX+bY+c]=aE[X]+bE[Y]+c\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+mean <span class="math notranslate nohighlight">\((\mu_x)\)</span><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(E[X]=\overline {X} = \mu_X\)</span>  = mean value or dc value of RV</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\mu_X ^2\)</span>  = dc power</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+mean square value <span class="math notranslate nohighlight">\((E[X^2])\)</span><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(E[X^2]\)</span> = total average power of RV = ac power + dc power</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\displaystyle E[X^2]=\int _{-\infty}^{\infty}x^2f_X(x)dx\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(E[X^2]=\sum _{i} x_i^2P[X=x_i]\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+variance <span class="math notranslate nohighlight">\((\sigma_x^2)\)</span><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\sigma_X^2=E[(X-\mu_X)^2]\)</span> = ac power of RV (definition)</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\color{green}\sigma_X^2=E[X^2]-\mu_X^2\)</span></p>
+<p class="card-text">ac power = total power - dc power</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(standard \space deviation = \sqrt{\sigma^2_x}\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+significance of mean<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\int_{\mu_X}^{\infty}f_X(x)dx=\int_{-\infty }^{\mu_X}f_X(x)dx=\dfrac{1}{2}\)</span></p>
+</div>
+</details></div>
+</details><ul>
+<li><p>standard PDF for CRV</p>
+<ul>
+<li><p>uniform PDF</p>
+<p>X~U[a,b]</p>
+<p><span class="math notranslate nohighlight">\(\mu_{X} = \frac{a+b}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma _{X}^2=(\frac{b-a}{12})^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X^2]=\frac{a^2+b^2+ab}{3}\)</span></p>
+</li>
+<li><p>triangular PDF</p>
+<p><span class="math notranslate nohighlight">\(X \sim \triangle[a,c,b]\)</span></p>
+<p>peak value = <span class="math notranslate nohighlight">\(\dfrac{2}{b-a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X] = \mu _X= \dfrac{a+b+c}{3}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma _X^2 = \dfrac{a^2+b^2+c^2-ab-bc-ca}{18}\)</span></p>
+</li>
+<li><p>gaussian, normal distribution</p>
+<p><span class="math notranslate nohighlight">\(X\sim N(\mu_X, \sigma_X ^2)\)</span></p>
+<p>pdf : <span class="math notranslate nohighlight">\(\boxed{f_X(x)=\dfrac{1}{\sqrt{2\pi\sigma_X^2}}e^{\frac{-(x-\mu_X)^2}{2\sigma_X ^2}}}\)</span></p>
+<p>cdf : <span class="math notranslate nohighlight">\(F_X(x)=P\{X\le x\} = 1-P\{X \gt x\}=1-Q  [ \dfrac{x-\mu_X}{\sigma_X} ]\)</span></p>
+<p><span class="math notranslate nohighlight">\(P\{X=c\}=0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{P\{X\gt a\}=Q  [ \dfrac{a-\mu_X}{\sigma_X} ]}\)</span></p>
+</li>
+<li><p>rayleigh pdf</p>
+<p><span class="math notranslate nohighlight">\(f_X(x)=\frac{x}{\sigma_X^2}e^{\frac{-x^2}{2\sigma_X^2}}u(x)\)</span></p>
+</li>
+<li><p>exponential distribution</p>
+<p><span class="math notranslate nohighlight">\(f_X(x) = \begin{cases}
+     \lambda e^{-\lambda x} &amp;\text{if } x \ge 0 \\
+     0 &amp;\text{if } x \lt 0
+  \end{cases}\)</span></p>
+</li>
+<li><p>laplace distribution</p>
+<p><span class="math notranslate nohighlight">\(f_X(x)=ae^{-b |x|} \space where \space\dfrac{2a}{b}=1\)</span> ( a &gt;0 , b&gt;0)</p>
+</li>
+</ul>
+</li>
+<li><p>linear transformation</p>
+<p>Y=aX+b</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(E[Y]\)</span></p>
+<p><span class="math notranslate nohighlight">\(aE[X]+b\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(E[Y^2]\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^2E[X^2]+b^2+2abE[X]\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_Y^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^2\sigma_X^2\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(F_Y(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(P\{aX+b\le y\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(P\{X\le \frac{y-b}{a}\}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(f_Y(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{a}f_X(\frac{y-b}{a})\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(X\sim U[-m,m]\)</span></p>
+<p><span class="math notranslate nohighlight">\(Y\sim U[-am+b,am+b]\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(X \sim \triangle[-m,0,m]\)</span></p>
+<p><span class="math notranslate nohighlight">\(Y \sim \triangle[-am+b,b,am+b]\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(X \sim N[\mu_X,\sigma_X^2]\)</span></p>
+<p><span class="math notranslate nohighlight">\(X \sim N[a\mu_X+b,a^2\sigma_X^2]\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>bivariate RV</p>
+<ul>
+<li><p>joint CDF</p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(x,y)=P\{X\le x,Y\le y \}\)</span></p>
+<ul>
+<li><p>properties</p>
+<p><span class="math notranslate nohighlight">\(0\le F_{XY}(x,y) \le 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(\infty,\infty)=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(-\infty,y)=F_{XY}(x,-\infty)=F_{XY}(-\infty,-\infty)=0\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>marginal CDF</p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(\infty,y)=F_{Y}(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(x,\infty)=F_{X}(x)\)</span></p>
+</li>
+<li><p>conditional CDF</p>
+<p><span class="math notranslate nohighlight">\(F_{\frac{Y}{X}}(\frac{y}{x})=\dfrac{F_{XY}(x,y)}{F_{X}(x)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(F_{\frac{X}{Y}}(\frac{x}{y})=\dfrac{F_{XY}(x,y)}{F_{Y}(y)}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(F_{XY}(x,y)=F_{\frac{X}{Y}}(\frac{x}{y})F_{Y}(y)=F_{\frac{Y}{X}}(\frac{y}{x})F_{X}(x)\)</span></p>
+<ul>
+<li><p>if X and Y are independent then <span class="math notranslate nohighlight">\(F_{\frac{Y}{X}}(\frac{y}{x})=F_Y(y)\)</span> and <span class="math notranslate nohighlight">\(F_{\frac{X}{Y}}(\frac{x}{y})=F_x(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(F_{XY}(x,y)=F_{X}(x)F_{Y}(y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(f_{XY}(x,y)=f_{X}(x)f_{Y}(y)\)</span></p>
+</li>
+<li><p>joint PDF</p>
+<p><span class="math notranslate nohighlight">\(f_{XY}(x,y)=\dfrac{\partial^2F_{XY}(x,y)}{\partial x\partial y}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle F_{XY}(x,y)=\int_{-\infty}^x\int_{-\infty}^yf_{XY}(x,y)dxdy\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f_{XY}(x,y)dxdy=1\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle P\{x_1\le X\le x_2,y_1\le Y\le y_2\}=\iint_R f_{XY}(x,y)dxdy\)</span></p>
+<p><span class="math notranslate nohighlight">\(R=\{x_1\le X\le x_2,y_1\le Y\le y_2\} \cap \{ region \space of \space pdf\}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>marginal PDF</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle f_{X}(x)=\int_{-\infty}^{\infty}f_{XY}(x,y)dy\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle f_{Y}(y)=\int_{-\infty}^{\infty}f_{XY}(x,y)dx\)</span></p>
+</li>
+<li><p>conditional PDF</p>
+<p><span class="math notranslate nohighlight">\(f_{\frac{Y}{X}}(\frac{y}{x})=\dfrac{f_{XY}(x,y)}{f_{X}(x)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(f_{\frac{X}{Y}}(\frac{x}{y})=\dfrac{f_{XY}(x,y)}{f_{Y}(y)}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>function of 2 RV</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(R_{XY}\)</span> correlation</p>
+<p><span class="math notranslate nohighlight">\(E[XY] = R_{XY}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sigma _{XY}\)</span> cross-covariance</p>
+<p><span class="math notranslate nohighlight">\(E[(X- \overline {X})(Y- \overline {Y})]=cov(X,Y)=R_{XY} - \mu_X \mu _Y\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sigma ^2_{X}\)</span>  auto-covariance</p>
+<p><span class="math notranslate nohighlight">\(E[(X- \overline {X})(X- \overline {X})]=\sigma _X ^2\)</span></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">orthogonal</span></code></p>
+<p><span class="math notranslate nohighlight">\(E[XY] = R_{XY} =0\)</span></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uncorrelated</span></code></p>
+<p><span class="math notranslate nohighlight">\(cov(X,Y) = \sigma_{XY} = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\rightarrow E[XY] = E[X]E[Y]\)</span></p>
+</li>
+<li><p>independent</p>
+<p><span class="math notranslate nohighlight">\(E[X^k Y^r] = E[X^k]E[Y^r]\)</span></p>
+<ul>
+<li><p>if 2 RV are independent then they will be uncorrelated always but vice-versa may not be true</p>
+<p><span class="math notranslate nohighlight">\(cov(X,Y) = \sigma_{XY} = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\rightarrow E[XY] = E[X]E[Y]= \mu_X \mu_Y\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>correlation coefficient</p>
+<p><span class="math notranslate nohighlight">\(\rho = \dfrac{\sigma _{XY}}{\sigma_X \sigma _Y}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>maximum and minimum of 2 independent RV</p>
+<p><span class="math notranslate nohighlight">\(P[max(X,Y)&lt;z] = P[(X&lt;z)(Y&lt;z)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(P[max(X,Y)&gt;z] = 1-P[max(X,Y)&lt;z]\)</span></p>
+<p><span class="math notranslate nohighlight">\(P[min(X,Y)&gt;z] = P[(X&gt;z)(Y&gt;z)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(P[min(X,Y)&lt;z] = 1-P[min(X,Y)&gt;z]\)</span></p>
+</li>
+<li><p>RP</p>
+<p><span class="math notranslate nohighlight">\(E[X(t_1)X(t_2)] = R_{X(t_1)X(t_2)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma _{XX} (t_1, t_2)=R_{XX} (t_1,t_2)-\mu _{X(t_1)}\mu_{X(t_2)}\)</span></p>
+<ul>
+<li><p>types of RP</p>
+<ul>
+<li><p>strict sense stationary (SSSRP)</p>
+<p><span class="math notranslate nohighlight">\(k^{th}\)</span>  order PDF, CDF and PMF are independent of time shifting</p>
+<p><span class="math notranslate nohighlight">\(k^{th}\)</span> order joint PDF : <span class="math notranslate nohighlight">\(f_{X(t_1)X(t_2)\dots X(t_k)} (x_1,x_2\dots x_k)\)</span></p>
+</li>
+<li><p>wide sense stationary (WSSRP)</p>
+<p>SSSRP up-to <span class="math notranslate nohighlight">\(2^{nd}\)</span> order</p>
+<p><span class="math notranslate nohighlight">\(E[X(t)]=\mu_X\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X^2(t)] = R_{XX}(0)= constant\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma^2_{X(t)} = constant\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X(t_1) X(t_2)] = R_{XX} (t_1 \sim t_2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X(t) X(t+\tau)] = R_{XX} (\tau)= R_{XX} (-\tau)\)</span></p>
+<p><span class="math notranslate nohighlight">\(cov(X(t_1) X(t_2)) = R_{XX} (t_1 \sim t_2) - \mu_X ^2\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(X(t)=Acos(\omega_o t +\phi)\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X(t)] =0\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X^2(t)]=\dfrac{A^2}{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[X(t)X(t+\tau)]=\dfrac{A^2}{2}cos(\omega_o \tau)\)</span></p>
+</li>
+<li><p>transmission through LTI</p>
+<p><span class="math notranslate nohighlight">\(x(t) \longrightarrow \boxed{h(t)} \longrightarrow  y(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_Y(\tau) =R_X(\tau)*h(\tau)*h(-\tau)\)</span></p>
+<p><span class="math notranslate nohighlight">\(S_{YY}(f) = S_{XX}(f)| H(f) |^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(E[Y(t)] = \mu_X H(s) \Big|_{s=0}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle E[Y^2(t)]=\int _{-\infty}^{\infty}S_{YY}(f) df= \int _{-\infty}^{\infty}S_{XX}(f)| H(f) |^2 df\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>ergodic</p>
+<p>statistical average of RP = time average of RP</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle\int _{-\infty}^{\infty} X(t) f(x)_{X(t)}dx=\lim \limits_{T\rightarrow \infty} \dfrac{1}{T} \int _{-\frac{1}{T}}^{\frac{1}{T}} X(t) dt\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_{XX} (\infty) = \mu^2_{X}\)</span> only when X(t) is non-periodic ergodic</p>
+</li>
+<li><p>cyclostationary</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>density functions</p>
+<ul>
+<li><p>ESD</p>
+<p><span class="math notranslate nohighlight">\(G_{XX}(\omega)=|X(\omega)|^2 \space \text{or } G_{XX}(f)=|X(f)|^2 \space\)</span><span class="math notranslate nohighlight">\(\dfrac{\text{Joule}}{\text{Hz}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_{XX} (\tau)  \longleftrightarrow G_{XX}(\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_{XX}(0) = \text{energy} =\dfrac{1}{2\pi}\displaystyle\int_{-\infty}^{\infty} G_{XX}(\omega) d\omega=\int_{-\infty}^{\infty} G_{XX}(f) df\)</span></p>
+</li>
+<li><p>PSD</p>
+<p><span class="math notranslate nohighlight">\(S_{XX}(f)=\lim \limits_{T\rightarrow\infty}\dfrac{1}{T}|X_T(f)|^2 \space\)</span><span class="math notranslate nohighlight">\(\dfrac{\text{Watt}}{\text{Hz}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_{XX} (\tau)  \longleftrightarrow S_{XX}(\omega)\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_{XX}(0) = \text{power}=\dfrac{1}{2\pi}\displaystyle\int_{-\infty}^{\infty} S_{XX}(\omega) d\omega=\int_{-\infty}^{\infty} S_{XX}(f) df\)</span></p>
+</li>
+<li><p>bandpass density functions</p>
+<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{ESD}} \dfrac{A^2}{4}[G_{X}(f-f_c)+G_X(f+f_c)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\)</span></p>
+<ul>
+<li><p>if <span class="math notranslate nohighlight">\(\theta \sim [0,2\pi]\)</span> and <span class="math notranslate nohighlight">\(X(t)\)</span> is WSSRP</p>
+<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\)</span></p>
+<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{ACF}}\dfrac{A^2}{2}R_X (\tau) \cos (\omega_c\tau)\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="analog-communication">
+<h2>analog communication<a class="headerlink" href="#analog-communication" title="Permalink to this headline">¶</a></h2>
+<p><span class="math notranslate nohighlight">\(voice \rightarrow [300 Hz - 3.5 kHz] \\ audio \rightarrow [20 Hz - 20 kHz] \\video \rightarrow [ 0 Hz - 4.5 MHz]\)</span></p>
+<ul>
+<li><p>hilbert transform</p>
+<p>HT is a non-causal LTI system</p>
+<p><span class="math notranslate nohighlight">\(\boxed{h(t) =\dfrac{1}{\pi t}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\hat {x} (t) =x(t)*h(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\dfrac{1}{\pi t} \longleftrightarrow-j \cdot\text{sgn}(\omega)}\)</span></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(A\cos(\omega_o t+\phi) \longrightarrow \boxed{H(\omega)} \longrightarrow A\sin(\omega_ot+\phi)\)</span></p>
+<p><span class="math notranslate nohighlight">\(y(t) = A|H(\omega_o)|\cos (\omega_ot+\phi+\angle H(\omega_o))\)</span></p>
+<p><span class="math notranslate nohighlight">\(|H(\omega_o)|=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\angle H(\omega_o) = -\dfrac{\pi}{2}\)</span> ,     <span class="math notranslate nohighlight">\(\omega _o &gt;0\)</span></p>
+</li>
+<li><p>for <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">pass</span></code> signals</p>
+<p><span class="math notranslate nohighlight">\(\text{HT} [m(t) \cos (\omega _ct)]=m(t)\sin (\omega _ct)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{HT} [m(t) \sin (\omega _ct)]=-m(t)\cos (\omega _ct)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>envelope</p>
+<p><code class="docutils literal notranslate"><span class="pre">pre-envelope</span></code> : <span class="math notranslate nohighlight">\(\boxed{x_+(t) = x(t) +j \hat{x} (t)}\)</span>  → calculated for baseband(wideband) and bandpass (narrow band)</p>
+<p><code class="docutils literal notranslate"><span class="pre">complex</span> <span class="pre">envelope</span></code>: <span class="math notranslate nohighlight">\(\boxed{x_c(t) =x_+(t) e^{-j\omega_c t}}\)</span>  → calculated for bandpass (narrow band)</p>
+</li>
+<li><p>amplitude modulation</p>
+<ul>
+<li><p>DSB-FC</p>
+<p><span class="math notranslate nohighlight">\(\mu =\dfrac{|m(t)|_{max}}{A_c}=k_a |m(t)|_{max}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{S_{AM}(t)= [A_C + m(t)]\cos (2\pi f_c t)=A_C[1 + k_am(t)]\cos (2\pi f_c t)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_{AM }=P_c +P_{SB}= P_c +\dfrac{P_m}{2}=P_c(1+k_a^2P_m)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\eta =\dfrac{P_{SB}}{P_{AM}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_{AM} = \overline I_{AM}^2(t)= \overline V_{AM}^2(t)\)</span></p>
+<ul>
+<li><p>sinusoidal</p>
+<p><span class="math notranslate nohighlight">\(P_{AM }=P_c\Big(1+\dfrac{\mu_1^2+\mu_2^2+\dots}{2}\Big)\)</span></p>
+</li>
+<li><p>triangular</p>
+<p>half-wave symmetric : <span class="math notranslate nohighlight">\(f_o,3f_o,5f_o,7f_o \dots\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_{AM }=P_c\Big(1+\dfrac{\mu^2}{3}\Big)\)</span></p>
+</li>
+<li><p>square wave</p>
+<p><span class="math notranslate nohighlight">\(P_{AM }=P_c\Big(1+\mu^2\Big)\)</span></p>
+</li>
+<li><p>AM modulator</p>
+<ul>
+<li><p>SLD</p>
+<ul>
+<li><p>BPF</p>
+<p><span class="math notranslate nohighlight">\(2f_m &lt; f_L&lt;f_c-f_m\)</span></p>
+<p><span class="math notranslate nohighlight">\(f_c+f_m&lt;f_H&lt;2f_c\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(A_c' =a_o A_c\)</span></p>
+<p><span class="math notranslate nohighlight">\(k_a =\dfrac{2a_1}{a_o}\)</span></p>
+</li>
+<li><p>switching modulator</p>
+<p><span class="math notranslate nohighlight">\(A_c' = \dfrac{A_c }{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(k_a = \dfrac{4}{\pi A_c}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>AM demodulator</p>
+<ul>
+<li><p>envelop detector</p>
+<p>for detection of peaks : <span class="math notranslate nohighlight">\(\tau_c =R_s C &lt;&lt; \dfrac{1}{f_c}\)</span></p>
+<p>to avoid diagonal clipping : <span class="math notranslate nohighlight">\(\tau_d =R_L C &lt;&lt; \dfrac{1}{f_m}\)</span></p>
+<p>to avoid fluctuations or steep discharging : <span class="math notranslate nohighlight">\(\tau_d =R_L C &gt;&gt; \dfrac{1}{f_c}\)</span></p>
+</li>
+<li><p>synchronous detector (costly)</p>
+<p>received signal is multiplied by locally generated carrier</p>
+<p><span class="math notranslate nohighlight">\(c'(t)= A_c ' cos[(\omega_c + \Delta \omega )t + \Delta \phi]\)</span> and then passed through LPF</p>
+<p>LPF output:  <span class="math notranslate nohighlight">\(\frac{A_c A_c '}{2}\cos(\Delta \omega t +\Delta\phi)+\frac{ A_c ' m(t)}{2}\cos(\Delta \omega t +\Delta\phi)\)</span></p>
+</li>
+<li><p>SLD (impractical method)</p>
+<p><span class="math notranslate nohighlight">\(\Big(\dfrac{S}{I}\Big)_{min} = \dfrac{2}{\mu}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DSB-SC</p>
+<p><code class="docutils literal notranslate"><span class="pre">suppressed</span> <span class="pre">carrier</span> <span class="pre">impulse</span></code></p>
+<p><span class="math notranslate nohighlight">\(\boxed{S_{\text{DSB-SC}}(t)= A_c  m(t)\cos (2\pi f_c t)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(P = P_{m}P_c = \overline {m^2(t)} \times \dfrac{A_c^2}{2}\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">DSB</span> <span class="pre">modulator</span> <span class="pre">--→</span> <span class="pre">multiplier</span> <span class="pre">or</span> <span class="pre">product</span> <span class="pre">modulator</span></code></p>
+<ul>
+<li><p>DSB-SC modulator</p>
+<ul>
+<li><p>balanced modulator</p>
+<p><span class="math notranslate nohighlight">\(s(t) =2A_c k_a m(t)\cos (2\pi f_c t)\)</span></p>
+</li>
+<li><p>ring modulator (product modulating)</p>
+<p>BPF output : <span class="math notranslate nohighlight">\(y(t) =\dfrac{4}{\pi}m(t) \cos (\omega _c t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(x(t) \propto m(t) c(t) + m(t)\cos (3\omega_c t)+ m(t)\cos (5\omega_c t)+\dots\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>synchronous detector</p>
+<p>output : <span class="math notranslate nohighlight">\(y(t) = \dfrac{kA_c A_c '}{2}m(t)\)</span> where k is filter gain</p>
+</li>
+</ul>
+</li>
+<li><p>SSB-SC</p>
+<p><span class="math notranslate nohighlight">\(\boxed{S(t)= \dfrac{A_C}{2} m(t)\cos (2\pi f_c t)\pm \dfrac{A_C}{2}\hat{m}(t)\sin (2\pi f_c t)}\)</span></p>
+<ul>
+<li><p>SSB-SC modulator</p>
+<ul>
+<li><p>phase discrimination</p>
+<ul>
+<li><p>-90 <span class="math notranslate nohighlight">\(\degree\)</span>  hilbert wideband transform (phase shifter) is not practical</p>
+<p><span class="math notranslate nohighlight">\(\phi = - \tan^{-1} (\omega RC)\)</span>                 RC → High , <span class="math notranslate nohighlight">\(\omega\)</span>  → fixed</p>
+</li>
+</ul>
+</li>
+<li><p>frequency discrimination (practical method)</p></li>
+</ul>
+</li>
+<li><p>SSB-SC demodulator (synchronous detector)</p></li>
+</ul>
+</li>
+<li><p>VSB-SC</p>
+<p>SSB-SC signal + small portion of adjacent sideband</p>
+</li>
+</ul>
+</li>
+<li><p>angle modulation</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(|x(t)|_{max}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+        \def\arraystretch{1.5}\begin{array}{c:c} 
+        A\cos (\omega_o t) + B\sin(\omega_o t)&amp; \sqrt{A^2 + B^2} 
+         \\ \hdashline A\cos (\omega_o t) + B\cos(\omega_o t) &amp; |A+B| 
+         \\ \hdashline A\cos (\omega_1 t) + B\cos(\omega_2 t) &amp; |A+B| 
+         \\ \hdashline A\cos (\omega_1 t) + B\sin(\omega_2 t) &amp; &lt;|A+B| \text{ if $A\ne B$} \\         &amp; =|A+B| \text{ if $A = B$} 
+        \end{array}
+        \end{split}\]</div>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\omega _i (t) =\dfrac{d \theta_i(t)}{dt}\)</span></p>
+<p><span class="math notranslate nohighlight">\(f _i (t) =\dfrac{1}{2\pi}\dfrac{d \theta_i(t)}{dt} = f_c +\Delta f(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\theta_i(t) = \displaystyle\int_{-\infty}^{t}\omega _i (t) dt=2\pi\int_{-\infty}^{t}f _i (t) dt\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{s(t) =A_c \cos (\omega _c t +\Delta\phi(t))=A_c \cos (\theta_i(t))}\)</span></p>
+<p><span class="math notranslate nohighlight">\(|\Delta\omega(t)|_{max} =\Big|\dfrac{d\Delta \phi}{dt} \Big| _{max}\)</span>               <span class="math notranslate nohighlight">\(|\Delta f(t)|_{max} = \dfrac{1}{2\pi}\Big|\dfrac{d\Delta \phi}{dt} \Big| _{max}\)</span></p>
+<ul>
+<li><p>frequency modulation</p>
+<p><span class="math notranslate nohighlight">\(\dfrac{d\Delta \phi}{dt} \propto m(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(`K_f: \frac{rad}{V-sec}`\)</span>             <span class="math notranslate nohighlight">\(\Delta \omega (t) = K_f m(t)\)</span>         <span class="math notranslate nohighlight">\(\boxed{\omega_i(t) = \omega_c + K_f  m(t)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(`K_f: \frac{Hz}{V}`\)</span>                 <span class="math notranslate nohighlight">\(\Delta f(t) = K_f m(t)\)</span>         <span class="math notranslate nohighlight">\(\boxed{f_i(t) = f_c + K_f  m(t) }\)</span></p>
+<p>modulation index / deviation ratio  <span class="math notranslate nohighlight">\(\beta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\beta _{FM} = \dfrac{|\Delta\omega(t)|_{max}}{\omega_{max}}=\dfrac{K_f|m(t)|_{max}}{\omega_{max}}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\beta _{FM} =  \dfrac{|\Delta f(t)|_{max}}{f_{max}}=\dfrac{K_f|m(t)|_{max}}{f_{max}}}\)</span></p>
+</li>
+<li><p>phase modulation</p>
+<p><span class="math notranslate nohighlight">\(\Delta \phi\propto m(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(`K_p: \frac{rad}{V}`\)</span>             <span class="math notranslate nohighlight">\(\Delta \phi(t)  = K_p m(t)\)</span>                <span class="math notranslate nohighlight">\(\boxed{\theta_i(t) = \omega_ct + K_p  m(t)}\)</span></p>
+<p>modulation index / deviation ratio  <span class="math notranslate nohighlight">\(\beta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\beta _{PM} =  \dfrac{|\Delta f(t)|_{max}}{f_{max}}=\dfrac{\dfrac{K_p}{2\pi}\Big|\dfrac{dm(t)}{dt}\Big|_{max}}{f_{max}}}\)</span></p>
+</li>
+<li><p>bessel’s function</p>
+<p><span class="math notranslate nohighlight">\(J_{-n}(\beta) = (-1)^n J_n(\beta)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum \limits_{n=-\infty}^{\infty} J^2_n (\beta) =1\)</span></p>
+<p><span class="math notranslate nohighlight">\(J_n (\beta) =0\)</span>    for <span class="math notranslate nohighlight">\(n&gt;&gt;\beta\)</span></p>
+<p><span class="math notranslate nohighlight">\(J_0 (\beta) =0\)</span>    for  <span class="math notranslate nohighlight">\(\beta =2.4,5.5,8.6,11.8\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\boxed{s(t) = A_c \cos (\omega_c t+\beta \sin \omega_m t) \equiv A_c \sum \limits_{n=-\infty}^{\infty}J_n (\beta)\cos [2\pi(f_c +nf_m) t]}\)</span></p>
+<ul>
+<li><p>narrow band <span class="math notranslate nohighlight">\((\beta &lt;&lt;1)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\theta \rightarrow small\)</span></p>
+<p><span class="math notranslate nohighlight">\(\cos\theta \approx 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sin\theta \approx 0\)</span></p>
+<p>NBFM: <span class="math notranslate nohighlight">\(s(t)= A_c \cos (2\pi f_c t) - A_c \beta\sin (2\pi f_m t)\sin(2\pi f_c t)\)</span></p>
+<p>NBPM: <span class="math notranslate nohighlight">\(s(t)= A_c \cos (2\pi f_c t) - A_c \beta\cos (2\pi f_m t)\sin(2\pi f_c t)\)</span></p>
+</li>
+<li><p>wide band</p></li>
+<li><p>BW</p>
+<p><span class="math notranslate nohighlight">\(n^{th}\)</span>  order sideband ——→ BW = <span class="math notranslate nohighlight">\(n(2f_m)\)</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">carson's</span> <span class="pre">rule</span></code> : <span class="math notranslate nohighlight">\(\boxed{BW=(\beta +1)2f_m}\)</span>  for 98% transmission (<span class="math notranslate nohighlight">\(\beta+1\)</span> order sideband ) <span class="math notranslate nohighlight">\(J_{\beta+1} (\beta) \ne 0\)</span></p>
+</li>
+<li><p>power</p>
+<p><span class="math notranslate nohighlight">\(n^{th}\)</span> harmonic : <span class="math notranslate nohighlight">\(\overline {s^2 (t)} = P_c [J_o^2(\beta) +2(J_1^2(\beta)+J_2^2(\beta)+\dots +J_n^2(\beta))]\)</span></p>
+<p><span class="math notranslate nohighlight">\(J_o^2(\beta) +2(J_1^2(\beta)+J_2^2(\beta)+\dots +\infty = 1\)</span></p>
+</li>
+<li><p>frequency mixer</p>
+<p>frequency mixer : multiplier followed by BPF</p>
+<p>BPF → <span class="math notranslate nohighlight">\(f_c +f_l\)</span>  : upconverter</p>
+<p>BPF → <span class="math notranslate nohighlight">\(f_c \sim f_l\)</span>  : downconverter</p>
+</li>
+<li><p>frequency multiplier or angle multiplier</p>
+<p>frequency multiplier or angle multiplier : square law device followed by BPF</p>
+<p><span class="math notranslate nohighlight">\(A\cos(\theta) \longrightarrow \boxed {\times n} \longrightarrow A' \cos(n\theta)\)</span></p>
+</li>
+<li><p>wide band FM generation</p>
+<ul>
+<li><p>armstrong method (indirect method)</p></li>
+<li><p>direct method of FM generation</p>
+<p>VCO : modified hartley oscillator</p>
+<p><span class="math notranslate nohighlight">\(L_{eq} =L_1 + L_2\)</span></p>
+<p><span class="math notranslate nohighlight">\(C_{junc} = C_o -km(t)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\omega _i(t) = \dfrac{1}{\sqrt{LC_{junc}(t)}}\)</span></p>
+<p>for <code class="docutils literal notranslate"><span class="pre">VCO</span> <span class="pre">as</span> <span class="pre">FM</span> <span class="pre">generator</span></code> : <span class="math notranslate nohighlight">\(\boxed{\dfrac{\Delta \omega}{\omega_o}&lt;&lt;&lt;\dfrac{1}{2}}\)</span>            <span class="math notranslate nohighlight">\(\boxed{\dfrac{\Delta C}{C_o}&lt;&lt;&lt;1}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>FM demodulator</p>
+<p><span class="math notranslate nohighlight">\(s(t) \rightarrow \boxed{\dfrac{d}{dt}} \xrightarrow{ \text{amplitude  angle modulated}} \boxed{\text {ED}} \longrightarrow || \longrightarrow m(t)\)</span>      <span class="math notranslate nohighlight">\(|\Delta f_{max}| \le f_c\)</span></p>
+<ul>
+<li><p>practical FM demodulators</p>
+<ul>
+<li><p>PLL</p>
+<ul>
+<li><p>phase comparator</p>
+<p>multiplier followed by LPF : rejects the frequencies centered at <span class="math notranslate nohighlight">\(2f_c\)</span></p>
+</li>
+<li><p>VCO</p>
+<p>sinusoidal waveform generator whose output frequency varies linearly with input message signal</p>
+<p>frequency of VCO → <span class="math notranslate nohighlight">\(f_c\)</span></p>
+</li>
+</ul>
+<p>phase lock : <span class="math notranslate nohighlight">\(|H(f)| \rightarrow \infty\)</span>          <span class="math notranslate nohighlight">\(v(t) = \dfrac{k_f}{k_v} m(t)\)</span></p>
+<p>lock mode : <span class="math notranslate nohighlight">\(f_{s(t)} = f_{v(t)}\)</span></p>
+<p>capture mode : <span class="math notranslate nohighlight">\(\phi_e (t) \rightarrow 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{lock range} \ge \text{capture range}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\electronics\communication"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../analog/h-parameters/h_parameters.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">h-parameters</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../emft/emft.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Electromagnetic Theory</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By J.K. Open Source Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
