@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Analog Circuits
+# # Analog Electronics and Circuits
 # 
 # ```{admonition} power is absorbed in case of semiconductor devices
 # :class: dropdown
