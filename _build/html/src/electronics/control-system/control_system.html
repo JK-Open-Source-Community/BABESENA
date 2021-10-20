@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control System &#8212; J-Book</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Signals and Systems" href="../signal-system/signal_system.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">J-Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Mathematics and Aptitude
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics-aptitude/maths.html">
+   Mathematics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics-aptitude/aptitude.html">
+   Aptitude
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Analog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analog/analog.html">
+   Analog Electronics and Circuits
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analog/h-parameters/h_parameters.html">
+     h-parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Communication
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../communication/communication.html">
+   Communication System
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Electromagnetics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../emft/emft.html">
+   Electromagnetic Theory
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Signal and Systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal-system/signal_system.html">
+   Signals and Systems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Control System
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Control System
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/src/electronics/control-system/control_system.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/JK-Open-Source-Community/babesena"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/JK-Open-Source-Community/babesena/issues/new?title=Issue%20on%20page%20%2Fsrc/electronics/control-system/control_system.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="control-system">
+<h1>Control System<a class="headerlink" href="#control-system" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>tachometer</p>
+<p>is derivative feedback</p>
+</li>
+<li><p>type</p>
+<p>type is defined for OLTF of unity feedback systems</p>
+</li>
+<li><p>dominant pole</p>
+<p>if <span class="math notranslate nohighlight">\(\frac{p_1}{p_2}\ge5\)</span> → <span class="math notranslate nohighlight">\(\text{TF}=\frac{\text{DC Gain}}{\text{significant pole}}\)</span></p>
+<p>eliminate poles at origin and significant poles → <span class="math notranslate nohighlight">\(\text{DC Gain}=\lim \limits_{s\rightarrow 0}  \text{TF}\)</span></p>
+</li>
+<li><p>sensitivity</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle S^T_G = \dfrac{\frac{\partial T}{T}}{\frac{\partial G}{G}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle S^T_H = \dfrac{\frac{\partial T}{T}}{\frac{\partial H}{H}}\)</span></p>
+</li>
+<li><p>mason gain</p>
+<p><span class="math notranslate nohighlight">\(\boxed{\text{TF} = \frac{{ \sum _{k = 1}^n {M_k}{{\rm{\Delta }}_k}}}{{\rm{\Delta }}}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Delta\)</span> = 1 - (sum of loop gains of individual loops) + (sum of product of loop gain of two non-touching loops) - (sum of product of loop gain of three non-touching loops) + <span class="math notranslate nohighlight">\(\dots\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Delta_k\)</span> = 1 - (sum of loop gains of individual loops which are not common with given path) + (sum of product of loop gain of two non-touching loops which are not common with given path) - (sum of product of loop gain of three non-touching loops which are not common with given path) + <span class="math notranslate nohighlight">\(\dots\)</span></p>
+</li>
+<li><p>first order</p>
+<p><span class="math notranslate nohighlight">\(\text{TF}=\dfrac{k}{1+s\tau}\)</span></p>
+<ul>
+<li><p>impulse response</p>
+<p><span class="math notranslate nohighlight">\(c(t) = \dfrac{1}{\tau}e^{-\frac{t}{\tau}}\)</span></p>
+</li>
+<li><p>step response</p>
+<p><span class="math notranslate nohighlight">\(c(t)=u(t)\lbrack1-e^{\frac{-t}{\tau}}\rbrack\)</span></p>
+</li>
+<li><p>ramp response</p>
+<p><span class="math notranslate nohighlight">\(c(t)=tu(t)-\tau\lbrack1-e^{\frac{-t}{\tau}}\rbrack u(t)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>steady state error</p>
+<p><span class="math notranslate nohighlight">\(e(t)=r(t)-c(t)\)</span></p>
+<ul>
+<li><p>non-unity</p>
+<p>if <span class="math notranslate nohighlight">\(e(t)=r(t)-c(t)\)</span> then → <span class="math notranslate nohighlight">\(G'(s) = \dfrac{G(s)}{1+G(s)H(s)-G(s)}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(K_p = \lim \limits_{s\rightarrow 0} G(s)\)</span></p>
+<p><span class="math notranslate nohighlight">\(K_v = \lim \limits_{s\rightarrow 0} s\cdot G(s)\)</span></p>
+<p><span class="math notranslate nohighlight">\(K_a = \lim \limits_{s\rightarrow 0} s^2\cdot G(s)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\def\arraystretch{1.5}\begin{array}{c:c:c} 
+  \frac{1}{s} &amp; u(t) &amp; E_{ss} = \frac{1}{1+K_p}
+   \\ \hdashline 
+  \frac{1}{s^2} &amp; t \cdot u(t) &amp; E_{ss} = \frac{1}{K_v} \\ \hdashline 
+  \frac{1}{s^3} &amp; \frac{t^2}{2} u(t)&amp; E_{ss} = \frac{1}{K_a} 
+  \end{array}}\)</span></p>
+</li>
+<li><p>time domain analysis</p>
+<ul>
+<li><p>first order</p>
+<p><span class="math notranslate nohighlight">\(\text{CLTF}=\dfrac{1}{s\tau +1}\)</span></p>
+<ul>
+<li><p>time domain parameters</p>
+<p>50% of final value: delay → <span class="math notranslate nohighlight">\(t_d =0.693\tau =\ln(2) \tau\)</span></p>
+<p>10% → 90% : rise-time → <span class="math notranslate nohighlight">\(t_r =  2.2\tau\)</span></p>
+<ul>
+<li><p>settling time (<span class="math notranslate nohighlight">\(t_s)\)</span></p>
+<p>5% error → <span class="math notranslate nohighlight">\(t_s \approx 3 \tau\)</span></p>
+<p>2% error → <span class="math notranslate nohighlight">\(t_s \approx 4 \tau\)</span></p>
+<p>0% error → <span class="math notranslate nohighlight">\(t_s \approx 5\tau\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>second order</p>
+<p>CLTF <span class="math notranslate nohighlight">\(= \dfrac{\omega_n^2}{s^2+2\zeta \omega_n s + \omega_n ^2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{s=-\zeta \omega_n  \pm \omega_n \sqrt{\zeta^2-1}=-\alpha\pm j\omega_d}\)</span></p>
+<p>damping frequency: <span class="math notranslate nohighlight">\(\omega_d\)</span></p>
+<p>damping factor: <span class="math notranslate nohighlight">\(\alpha\)</span></p>
+<p>damping ratio: <span class="math notranslate nohighlight">\(\zeta\)</span></p>
+<p><span class="math notranslate nohighlight">\(\tau =\dfrac{1}{\zeta \omega_n}=\dfrac{1}{\alpha}\)</span></p>
+<p><span class="math notranslate nohighlight">\(cos(\theta) = \zeta\)</span></p>
+<ul>
+<li><p>impulse response</p>
+<p><span class="math notranslate nohighlight">\(c(t) = \omega_n\dfrac{e^{-\zeta\omega_n t}}{\sqrt{1-\zeta^2}}sin(\omega_n t)\)</span>                                     for <span class="math notranslate nohighlight">\(0&lt;\zeta&lt;1\)</span></p>
+</li>
+<li><p>step response</p>
+<p><span class="math notranslate nohighlight">\(c(t) = 1- \dfrac{e^{-\zeta\omega_n t}}{\sqrt{1-\zeta^2}}sin(\omega_n t+\theta)\)</span>                           for <span class="math notranslate nohighlight">\(0&lt;\zeta&lt;1\)</span></p>
+</li>
+<li><p>time domain parameters</p>
+<p>50% of final value: delay → <span class="math notranslate nohighlight">\(\boxed{t_d =\dfrac{0.7\zeta +1}{\omega_n}}\)</span></p>
+<p>10% → 90% : rise-time → <span class="math notranslate nohighlight">\(\boxed{t_r =  \dfrac{n\pi-\theta}{\omega_d}}\)</span></p>
+<p>peak time → <span class="math notranslate nohighlight">\(\boxed{t_p =\dfrac{n\pi}{\omega
+  _d}} \begin{cases}
+     n=odd &amp;\text{maxima}  \\
+     n=even &amp;\text{minima}
+  \end{cases}\)</span></p>
+<p>first time-period: <span class="math notranslate nohighlight">\(T_p = t_{p_3} - t_{p_1}=\dfrac{2\pi}{\omega
+  _d}\)</span></p>
+<ul>
+<li><p>settling time (<span class="math notranslate nohighlight">\(t_s)\)</span></p>
+<p>5% error → <span class="math notranslate nohighlight">\(t_s \approx 3 \tau\)</span></p>
+<p>2% error → <span class="math notranslate nohighlight">\(t_s \approx 4 \tau\)</span></p>
+<p>0% error → <span class="math notranslate nohighlight">\(t_s \approx 5\tau\)</span></p>
+</li>
+</ul>
+<p>no of cycles → <span class="math notranslate nohighlight">\(\dfrac{t_s}{T_{p}} \approx \dfrac{4\tau}{T_p}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>routh hurwitz</p>
+<ul>
+<li><p>third order equation</p>
+<p><span class="math notranslate nohighlight">\(\boxed{\begin{array}{c:c} 
+  stable &amp; IP&gt;OP
+   \\ \hdashline 
+  marginal &amp; IP=OP \\ \hdashline 
+  unstable &amp; IP&lt;OP
+  \end{array}}\)</span></p>
+<p>auxiliary equation → coefficients of <span class="math notranslate nohighlight">\(s^2\)</span> and <span class="math notranslate nohighlight">\(s^0\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\epsilon \rightarrow 0^+\)</span></p>
+<ul>
+<li><p>ROZ → poles symmetrical about origin</p>
+<p>A → auxiliary equation from row above the ROZ</p>
+<p>roots of A are symmetrical poles</p>
+<p>replace ROZ by <span class="math notranslate nohighlight">\(\frac{dA}{ds}\)</span></p>
+<ul>
+<li><p>two ROZ → repeated symmetrical poles</p>
+<p>roots of A are repeated symmetrical poles</p>
+</li>
+</ul>
+</li>
+<li><p>gain margin and phase crossover</p>
+<p>last row of routh-hurwitz table must not be zero for <span class="math notranslate nohighlight">\(0&lt;k_1&lt;\infty\)</span></p>
+<p>→ make first element of odd row zero</p>
+<p>→ compare roots of <span class="math notranslate nohighlight">\(\frac{d(AE)}{ds} =0\)</span> with <span class="math notranslate nohighlight">\(s=\pm j \omega_{pc}\)</span></p>
+<ul>
+<li><p>otherwise</p>
+<p><span class="math notranslate nohighlight">\(\omega_{pc}\)</span>  is not defined</p>
+<p><span class="math notranslate nohighlight">\(\boxed{\begin{array}{c:c:c} 
+  CLTF &amp; OLTF &amp; GM (dB)
+   \\ \hdashline 
+  \begin{array}{c}
+     stable \\
+     unstable
+  \end{array} &amp; min\space phase  &amp;  \begin{array}{c}
+     \infty \\
+     -\infty
+  \end{array} \\ \hdashline 
+   \begin{array}{c}
+     stable \\
+     unstable
+  \end{array} &amp; non-min\space phase -I  &amp;  \begin{array}{c}
+     \infty \\
+     -\infty
+  \end{array} \\ \hdashline \begin{array}{c}
+     stable \\
+     unstable
+  \end{array} &amp; non-min\space phase -II  &amp;  \begin{array}{c}
+     -\infty \\
+     \infty
+  \end{array} 
+  \end{array}}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>root locus</p>
+<ul class="simple">
+<li><p>root locus is symmetric about real axis</p></li>
+<li><p>number of root locus branches is P or Z whichever is greater</p></li>
+<li><p>root locus exists if their is odd sum of poles and zeroes</p></li>
+<li><p>asymptotes = <span class="math notranslate nohighlight">\(N = P\sim Z\)</span></p></li>
+<li><p>angle = <span class="math notranslate nohighlight">\(\dfrac{(2q+1)180^o}{N}\)</span></p></li>
+<li><p>centroid = <span class="math notranslate nohighlight">\(\dfrac{(real \space part \space of \space poles)-(real \space part \space of \space zeroes)}{N}\)</span></p></li>
+<li><p>break points <span class="math notranslate nohighlight">\(\dfrac{dK}{ds}=0\)</span> by characteristic equation (valid/invalid breakpoints) and intersection with imaginary axis by RH criteria (auxiliary equation)</p></li>
+<li><p>angle of departure <span class="math notranslate nohighlight">\(\phi _d = 180 ^{\circ} + \angle GH(s) |_\text{at +ve imaginary complex pole}\)</span></p></li>
+<li><p>angle of arrival <span class="math notranslate nohighlight">\(\phi _a = 180 ^{\circ} - \angle GH(s) |_\text{at +ve imaginary complex zero}\)</span></p></li>
+</ul>
+</li>
+<li><p>frequency domain analysis</p>
+<ul>
+<li><p>bode plot (<span class="math notranslate nohighlight">\(\omega\)</span>  vs <span class="math notranslate nohighlight">\(dB\)</span> )</p>
+<p><span class="math notranslate nohighlight">\(dB = 20 \cdot log(|G(j\omega)H(j\omega)|)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\dfrac{20dB}{decade} = \dfrac{6dB}{octave}\)</span></p>
+<ul>
+<li><p>at pole</p>
+<p>slope = <span class="math notranslate nohighlight">\(- 20n \space \frac{dB}{decade}\)</span></p>
+<p>phase = <span class="math notranslate nohighlight">\(-n\frac{\pi}{2}\)</span></p>
+</li>
+<li><p>at zero</p>
+<p>slope = <span class="math notranslate nohighlight">\(+ 20n \space \frac{dB}{decade}\)</span></p>
+<p>phase = <span class="math notranslate nohighlight">\(+n\frac{\pi}{2}\)</span></p>
+</li>
+<li><p>magnitude</p>
+<p>eliminate corner frequencies <span class="math notranslate nohighlight">\(\ge\omega_{known}\)</span></p>
+<p>origin frequency <span class="math notranslate nohighlight">\((\omega=0.1)\)</span> is not corner frequency</p>
+<p>write TF in time constant format : <span class="math notranslate nohighlight">\(\dfrac{K(\dfrac{s}{\tau_1}+1)(\dfrac{s}{\tau_2}+1)\dots}{(\dfrac{s}{\tau_a}+1)(\dfrac{s}{\tau_b}+1)\dots}\)</span></p>
+<p><span class="math notranslate nohighlight">\(M = 20 \cdot log(|G(j\omega)H(j\omega)|)\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>polar plot (<span class="math notranslate nohighlight">\(|M|\)</span> vs <span class="math notranslate nohighlight">\(\phi\)</span> )</p>
+<p>direction : <span class="math notranslate nohighlight">\(\phi_o - \phi_{\infty}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\begin{array}{c:c:c} 
+  \omega &amp; M &amp; \phi
+   \\ \hdashline 
+  0 &amp; M _0 &amp; \phi _0 \\ \hdashline 
+  \infty &amp; M _{\infty} &amp;  \phi _{\infty}
+  \end{array}}\)</span></p>
+<p>gain cross over frequency (<span class="math notranslate nohighlight">\(\omega_{gc}\)</span>) : <span class="math notranslate nohighlight">\(\boxed{M = |G(s)H(s)| = 1 }\)</span></p>
+<p>phase cross over frequency (<span class="math notranslate nohighlight">\(\omega_{pc}\)</span>) : <span class="math notranslate nohighlight">\(\boxed {\angle G(s)H(s) = \pm 180^{\circ}}\)</span></p>
+<p>gain margin <span class="math notranslate nohighlight">\(= \dfrac{1}{|G(j\omega_{pc})H(j\omega_{pc})|}\)</span></p>
+<p>phase margin <span class="math notranslate nohighlight">\(= 180^{\circ} +\angle G(j\omega_{gc})H(j\omega_{gc})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\begin{array}{c:c} 
+  \omega _{pc} &gt; \omega_{gc}  &amp; stable \\ \hdashline 
+  \omega _{pc} = \omega_{gc}  &amp;  marginal \space stable \\ \hdashline 
+  \omega _{pc} &lt; \omega_{gc} &amp; unstable\end{array}}\)</span></p>
+</li>
+<li><p>nyquist plot</p>
+<p><span class="math notranslate nohighlight">\(N=P-Z\)</span></p>
+<p>N = number of encirclement of origin by GH(s) in GH(s) plane. N is +ve if contour and contour in GH(s) plane are opposite in direction</p>
+<p>P = number of poles of GH(s) strictly inside contour in s-plane</p>
+<p>Z = number of zeroes of GH(s) strictly inside contour in s-plane</p>
+<p>NYQUIST contour is CLOCKWISE</p>
+</li>
+</ul>
+</li>
+<li><p>compensator and controller</p>
+<ul>
+<li><p>lead compensator</p>
+<p>LEAD behaves similar to HIGH-PASS filter (zero dominant)</p>
+<p><span class="math notranslate nohighlight">\(TF = \alpha \Big( \dfrac{1+s\tau}{1+\alpha\tau s}\Big)\)</span>     where <span class="math notranslate nohighlight">\(\alpha &lt;1\)</span> and <span class="math notranslate nohighlight">\(\tau = R_1 C\)</span></p>
+<p><span class="math notranslate nohighlight">\(\alpha=\dfrac{R_2}{R_1+R_2}\)</span></p>
+</li>
+<li><p>lag compensator</p>
+<p>LAG behaves similar to LOW-PASS filter (pole dominant)</p>
+<p><span class="math notranslate nohighlight">\(TF = \dfrac{1+s\tau}{1+\beta\tau s}\)</span>     where <span class="math notranslate nohighlight">\(\beta &gt;1\)</span> and <span class="math notranslate nohighlight">\(\tau = R_2 C\)</span></p>
+<p><span class="math notranslate nohighlight">\(\beta=\dfrac{R_1+R_2}{R_2}\)</span></p>
+</li>
+<li><p>lead-lag and lag-lead</p>
+<p>LEAD LAG behaves similar to BAND-PASS filter (zero dominant)</p>
+<p>LAG LEAD behaves similar to BAND-REJECT filter (pole dominant)</p>
+</li>
+</ul>
+</li>
+<li><p>state space analysis</p>
+<p><span class="math notranslate nohighlight">\(\dot{X } = A X + BU\)</span></p>
+<p><span class="math notranslate nohighlight">\(Y = CX +DU\)</span></p>
+<p><span class="math notranslate nohighlight">\(TF = \dfrac{Y(s)}{U(s)}\)</span></p>
+<ul>
+<li><p>controllability</p>
+<p><span class="math notranslate nohighlight">\(Q_c = \begin{bmatrix}
+    B  &amp;
+    AB &amp; A^2B \dots A^{n-1}B 
+  \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(rank(Q_c)=rank(A)=n\)</span>  → completely controllable system</p>
+<p><span class="math notranslate nohighlight">\(|Q_c|\ne 0\)</span> → controllable system</p>
+</li>
+<li><p>observability</p>
+<p><span class="math notranslate nohighlight">\(Q_o = \begin{bmatrix}
+    C  \\
+    CA \\ CA^2\\ \vdots \\ C A^{n-1}
+  \end{bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(|Q_o|\ne 0\)</span> → observable system</p>
+<p><span class="math notranslate nohighlight">\(rank(Q_o)=rank(A)=n\)</span>  → completely observable system</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\electronics\control-system"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../signal-system/signal_system.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Signals and Systems</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By J.K. Open Source Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

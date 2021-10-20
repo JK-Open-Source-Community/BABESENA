@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: src/README.ipynb
+root: src/index.ipynb
 parts:
 
   - caption: Mathematics and Aptitude
@@ -27,3 +27,7 @@ parts:
   - caption: Signal and Systems
     chapters:
     - file : src/electronics/signal-system/signal_system
+
+  - caption: Control System
+    chapters:
+    - file: src/electronics/control-system/control_system.ipynb
