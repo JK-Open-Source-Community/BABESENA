@@ -90,8 +90,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../README.html">
+  <a class="reference internal" href="../../index.html">
    Home
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Mathematics and Aptitude
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics-aptitude/maths.html">
+   Mathematics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics-aptitude/aptitude.html">
+   Aptitude
   </a>
  </li>
 </ul>
@@ -103,7 +120,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../analog/analog.html">
-   Analog Circuits
+   Analog Electronics and Circuits
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -150,8 +167,20 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../signal%20system/signal_system.html">
+  <a class="reference internal" href="../signal-system/signal_system.html">
    Signals and Systems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Control System
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-system/control_system.html">
+   Control System
   </a>
  </li>
 </ul>
@@ -315,8 +344,6 @@ graph of CDF is continuous from right at a point x=a <div class="summary-down do
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><span class="math notranslate nohighlight">\( F_X(a)=F_X(a^{+}) \)</span></p>
 </div>
-</details></div>
-</details></div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 range calculations   <div class="summary-down docutils">
@@ -328,13 +355,9 @@ range calculations   <div class="summary-down docutils">
 change inequalities according to <span class="math notranslate nohighlight">\(b^{\pm}\)</span> and <span class="math notranslate nohighlight">\(a^{\pm}\)</span>
 <span class="math notranslate nohighlight">\(\color{green}  P(X=a) =F_X(a^+)-F_X(a^-)\)</span> = size of jump</p>
 </div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
+</details></div>
+</details></div>
+</details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 PDF<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -359,10 +382,7 @@ properties of PDF<div class="summary-down docutils">
 </ol>
 </div>
 </details></div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
+</details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 PMF<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -654,12 +674,16 @@ significance of mean<div class="summary-down docutils">
 <p><span class="math notranslate nohighlight">\(R_{XX}(0) = \text{power}=\dfrac{1}{2\pi}\displaystyle\int_{-\infty}^{\infty} S_{XX}(\omega) d\omega=\int_{-\infty}^{\infty} S_{XX}(f) df\)</span></p>
 </li>
 <li><p>bandpass density functions</p>
-<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{ESD}} \dfrac{A^2}{4}[G_{X}(f-f_c)+G_X(f+f_c)]\)</span></p>
-<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\)</span></p>
+<div class="math notranslate nohighlight">
+\[A \cdot X(t) \cos(\omega_c t) \overset{\text{ESD}} \longleftrightarrow \dfrac{A^2}{4}[G_{X}(f-f_c)+G_X(f+f_c)]\]</div>
+<div class="math notranslate nohighlight">
+\[A \cdot X(t) \cos(\omega_c t) \overset{\text{PSD}} \longleftrightarrow  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\]</div>
 <ul>
-<li><p>if <span class="math notranslate nohighlight">\(\theta \sim [0,2\pi]\)</span> and <span class="math notranslate nohighlight">\(X(t)\)</span> is WSSRP</p>
-<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\)</span></p>
-<p><span class="math notranslate nohighlight">\(A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{ACF}}\dfrac{A^2}{2}R_X (\tau) \cos (\omega_c\tau)\)</span></p>
+<li><p>if $<span class="math notranslate nohighlight">\(\theta \sim [0,2\pi]\)</span> and <span class="math notranslate nohighlight">\(X(t)\)</span>$ is WSSRP</p>
+<div class="math notranslate nohighlight">
+\[A \cdot X(t) \cos(\omega_c t+\theta) \overset{\text{PSD}} \longleftrightarrow \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]\]</div>
+<div class="math notranslate nohighlight">
+\[A \cdot X(t) \cos(\omega_c t+\theta) \overset{\text{ACF}} \longleftrightarrow \dfrac{A^2}{2}R_X (\tau) \cos (\omega_c\tau)\]</div>
 </li>
 </ul>
 </li>
@@ -776,7 +800,7 @@ significance of mean<div class="summary-down docutils">
 <ul>
 <li><p>phase discrimination</p>
 <ul>
-<li><p>-90 <span class="math notranslate nohighlight">\(\degree\)</span>  hilbert wideband transform (phase shifter) is not practical</p>
+<li><p>-90<span class="math notranslate nohighlight">\(^{\circ}\)</span>  hilbert wideband transform (phase shifter) is not practical</p>
 <p><span class="math notranslate nohighlight">\(\phi = - \tan^{-1} (\omega RC)\)</span>                 RC → High , <span class="math notranslate nohighlight">\(\omega\)</span>  → fixed</p>
 </li>
 </ul>

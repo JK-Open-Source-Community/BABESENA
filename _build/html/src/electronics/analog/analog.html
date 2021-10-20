@@ -42,6 +42,8 @@
     <script src="../../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,7 +54,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="h-parameters" href="h-parameters/h_parameters.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../../mathematics-aptitude/aptitude.html" />
+    <link rel="prev" title="Aptitude" href="../../mathematics-aptitude/aptitude.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,7 +90,7 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../README.html">
+  <a class="reference internal" href="../../index.html">
    Home
   </a>
  </li>
@@ -102,6 +104,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../mathematics-aptitude/maths.html">
    Mathematics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mathematics-aptitude/aptitude.html">
+   Aptitude
   </a>
  </li>
 </ul>
@@ -162,6 +169,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../signal-system/signal_system.html">
    Signals and Systems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Control System
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../control-system/control_system.html">
+   Control System
   </a>
  </li>
 </ul>
@@ -273,158 +292,136 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="analog-electronics-and-circuits">
 <h1>Analog Electronics and Circuits<a class="headerlink" href="#analog-electronics-and-circuits" title="Permalink to this headline">¶</a></h1>
-<div class="dropdown admonition">
-<p class="admonition-title">power is absorbed in case of semiconductor devices</p>
-<p>current direction should oppose voltage to make power -ve for example breakdown voltage should oppose the direction of flow of current</p>
-</div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Here’s my dropdown<div class="summary-down docutils">
+power is absorbed in case of semiconductor devices<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">And here’s my dropdown content</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Here’s my dropdown<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">And here’s my dropdown content</p>
+<p class="card-text">current direction should oppose voltage to make power -ve for example breakdown voltage should oppose the direction of flow of current</p>
 </div>
-</details></div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-- measuring devices
-    - iron voltmeter
-        
-        RMS 
-        
-    - magnetic
-- capacitors
-    
-    `voltage and current across capacitor is zero` → `short circuit`
-    
-    capacitors doesn&#39;t allow abrupt changes : $V_c(t^+)=V_c(t^-) = V_c(t)$ 
-    
-- inductors
-    
-    `voltage and current across inductor is zero` → `open circuit`
-    
-- diodes
-    - clampers
-        - negative clamper
-            
-            $V_{in_{max}} &gt; 0$  for diode to conduct  
-            
-        - positive clamper
-            
-            $V_{in_{min}} &lt; 0$ for diode to conduct
-            
-    - rectifiers
-        
-        $\text{form-factor} = \dfrac{x_{rms}}{x_{avg}}$ 
-        
-- transistor
-    - transistor biasing
-        
-        $S = \dfrac{\partial I_C}{\partial I_{C_O}} = \dfrac{\beta + 1}{1 - \beta\dfrac{\partial I_B}{ \partial I_C}}$
-        
-        $I_{E} = I_C+I_B$
-        
-        $I_C = \beta I_B + (1+\beta) I_{C_{O}}$
-        
-        $\beta = \frac{I_C}{I_B}$ ; common emitter gain (base as input and collector as output)
-        
-        $\alpha = \frac{I_C}{I_E}$ ; common base gain 
-        
-        If $\beta$ is high,  $I_C = I_E$ and  $I_B = 0$
-        
-        - collector with base bias with RE
-            
-        - voltage divider bias with RE
-            
-           
-            
-    - small signal analysis
-        - steps
-            1. turn off all dc sources and short all capacitors (small signal equivalent)
-            2. calculate parameters such as $r_\pi, r_e, g_m$
-            3. replace by model 
-            - calculate
-                - $r_i, R_i$
-                - $r_o, R_o$  by putting $v_s = 0$
-                - $A_v = \dfrac{v_o}{v_s}$
-                - $A_I = \dfrac{i_l}{i_i}$
-        
-        $g_m = \dfrac{I_c}{V_T}$
-        
-        $r_\pi = \dfrac{\beta}{g_m}$
-        
-        $r_o= \dfrac{V_A}{I_C} = \dfrac{1}{\lambda I_C}$
-        
-        $\boxed{\dfrac{v_{be}}{i_b} = h_{ie} = (1+\beta)r_e = r_\pi}$
-        
-        $\boxed{\dfrac{i_{c}}{i_b} = h_{fe} = \beta = g_mr_\pi}$
-        
-        - h - parameter
-            
-            $v_{be} \approx h_{ie} i_b$
-            
-            $i_c \approx h_{fe} i_b$
-            
-        - $r_e$ - model
-            
-            $r_e = \dfrac{V_T}{I_E}$
-            
-            $v_{be} = i_b (1+\beta) r_e$
-            
-            $r_i = \dfrac{v_{be}}{i_b} = (1+\beta)r_e$
-            
-        - $\pi$ -model
-            
-            $i_c = \dfrac{I_C}{V_T} v_{be} = g_m v_{be}$
-            
-            $\boxed{\dfrac{v_{be}}{i_b} = \dfrac{\beta}{g_m} = r_\pi}$
-            
-        - CE with $R_{E}$
-            
-            $R_i = (r_{\pi} + \beta R_E) || R_B$ 
-            
-            $A_v = \dfrac{-g_m R_C}{1 + g_m R_E}$
-            
-    - multistage
-        - CE-CE and CE-CC → cascade
-        - CE-CB → cascode
-        - CC-CC → Darlington pair
-        
-- op-amp
-    - differential amplifier
-        - differential mode
-            
-            $A_{v_1} = A_{v_2} = -g_m R_c$
-            
-            $A_d = \dfrac{v_o}{v_{id}} = g_m R_c$
-            
-        - common mode
-            
-            $A_{v_1} = A_{v_2} = A_c =\dfrac{-g_m R_c}{1 + 2 g_m R_E}$
-            
-        
-        $\text{CMRR} = \biggm\vert \dfrac{A_d}{A_c} \biggm\vert = 1 + 2\cdot g_m R_E$
-        
-        $v_{c} = \dfrac{v_1 + v_2 }{2}$
-        
-        $v_{id} = v_1 - v_2$
-        
-        $v_o = A_d\cdot v_{id} + A_c \cdot v_{c}$
-</pre></div>
-</div>
-<div class="dropdown admonition">
-<p class="admonition-title">Click the button to reveal!</p>
-<p>Some hidden toggle content!</p>
-</div>
+</details><ul>
+<li><p>measuring devices</p>
+<ul>
+<li><p>iron voltmeter</p>
+<p>RMS</p>
+</li>
+<li><p>magnetic</p></li>
+</ul>
+</li>
+<li><p>capacitors</p>
+<p><code class="docutils literal notranslate"><span class="pre">voltage</span> <span class="pre">and</span> <span class="pre">current</span> <span class="pre">across</span> <span class="pre">capacitor</span> <span class="pre">is</span> <span class="pre">zero</span></code> → <code class="docutils literal notranslate"><span class="pre">short</span> <span class="pre">circuit</span></code></p>
+<p>capacitors doesn’t allow abrupt changes : <span class="math notranslate nohighlight">\(V_c(t^+)=V_c(t^-) = V_c(t)\)</span></p>
+</li>
+<li><p>inductors</p>
+<p><code class="docutils literal notranslate"><span class="pre">voltage</span> <span class="pre">and</span> <span class="pre">current</span> <span class="pre">across</span> <span class="pre">inductor</span> <span class="pre">is</span> <span class="pre">zero</span></code> → <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">circuit</span></code></p>
+</li>
+<li><p>diodes</p>
+<ul>
+<li><p>clampers</p>
+<ul>
+<li><p>negative clamper</p>
+<p><span class="math notranslate nohighlight">\(V_{in_{max}} &gt; 0\)</span>  for diode to conduct</p>
+</li>
+<li><p>positive clamper</p>
+<p><span class="math notranslate nohighlight">\(V_{in_{min}} &lt; 0\)</span> for diode to conduct</p>
+</li>
+</ul>
+</li>
+<li><p>rectifiers</p>
+<p><span class="math notranslate nohighlight">\(\text{form-factor} = \dfrac{x_{rms}}{x_{avg}}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>transistor</p>
+<ul>
+<li><p>transistor biasing</p>
+<p><span class="math notranslate nohighlight">\(S = \dfrac{\partial I_C}{\partial I_{C_O}} = \dfrac{\beta + 1}{1 - \beta\dfrac{\partial I_B}{ \partial I_C}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(I_{E} = I_C+I_B\)</span></p>
+<p><span class="math notranslate nohighlight">\(I_C = \beta I_B + (1+\beta) I_{C_{O}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\beta = \frac{I_C}{I_B}\)</span> ; common emitter gain (base as input and collector as output)</p>
+<p><span class="math notranslate nohighlight">\(\alpha = \frac{I_C}{I_E}\)</span> ; common base gain</p>
+<p>If <span class="math notranslate nohighlight">\(\beta\)</span> is high,  <span class="math notranslate nohighlight">\(I_C = I_E\)</span> and  <span class="math notranslate nohighlight">\(I_B = 0\)</span></p>
+<ul class="simple">
+<li><p>collector with base bias with RE</p></li>
+<li><p>voltage divider bias with RE</p></li>
+</ul>
+</li>
+<li><p>small signal analysis</p>
+<ul>
+<li><p>steps</p>
+<ol class="simple">
+<li><p>turn off all dc sources and short all capacitors (small signal equivalent)</p></li>
+<li><p>calculate parameters such as <span class="math notranslate nohighlight">\(r_\pi, r_e, g_m\)</span></p></li>
+<li><p>replace by model</p></li>
+</ol>
+<ul class="simple">
+<li><p>calculate</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(r_i, R_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_o, R_o\)</span>  by putting <span class="math notranslate nohighlight">\(v_s = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A_v = \dfrac{v_o}{v_s}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A_I = \dfrac{i_l}{i_i}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(g_m = \dfrac{I_c}{V_T}\)</span></p>
+<p><span class="math notranslate nohighlight">\(r_\pi = \dfrac{\beta}{g_m}\)</span></p>
+<p><span class="math notranslate nohighlight">\(r_o= \dfrac{V_A}{I_C} = \dfrac{1}{\lambda I_C}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\dfrac{v_{be}}{i_b} = h_{ie} = (1+\beta)r_e = r_\pi}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\dfrac{i_{c}}{i_b} = h_{fe} = \beta = g_mr_\pi}\)</span></p>
+<ul>
+<li><p>h - parameter</p>
+<p><span class="math notranslate nohighlight">\(v_{be} \approx h_{ie} i_b\)</span></p>
+<p><span class="math notranslate nohighlight">\(i_c \approx h_{fe} i_b\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(r_e\)</span> - model</p>
+<p><span class="math notranslate nohighlight">\(r_e = \dfrac{V_T}{I_E}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_{be} = i_b (1+\beta) r_e\)</span></p>
+<p><span class="math notranslate nohighlight">\(r_i = \dfrac{v_{be}}{i_b} = (1+\beta)r_e\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\pi\)</span> -model</p>
+<p><span class="math notranslate nohighlight">\(i_c = \dfrac{I_C}{V_T} v_{be} = g_m v_{be}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\boxed{\dfrac{v_{be}}{i_b} = \dfrac{\beta}{g_m} = r_\pi}\)</span></p>
+</li>
+<li><p>CE with <span class="math notranslate nohighlight">\(R_{E}\)</span></p>
+<p><span class="math notranslate nohighlight">\(R_i = (r_{\pi} + \beta R_E) || R_B\)</span></p>
+<p><span class="math notranslate nohighlight">\(A_v = \dfrac{-g_m R_C}{1 + g_m R_E}\)</span></p>
+</li>
+</ul>
+</li>
+<li><p>multistage</p>
+<ul class="simple">
+<li><p>CE-CE and CE-CC → cascade</p></li>
+<li><p>CE-CB → cascode</p></li>
+<li><p>CC-CC → Darlington pair</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>op-amp</p>
+<ul>
+<li><p>differential amplifier</p>
+<ul>
+<li><p>differential mode</p>
+<p><span class="math notranslate nohighlight">\(A_{v_1} = A_{v_2} = -g_m R_c\)</span></p>
+<p><span class="math notranslate nohighlight">\(A_d = \dfrac{v_o}{v_{id}} = g_m R_c\)</span></p>
+</li>
+<li><p>common mode</p>
+<p><span class="math notranslate nohighlight">\(A_{v_1} = A_{v_2} = A_c =\dfrac{-g_m R_c}{1 + 2 g_m R_E}\)</span></p>
+</li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\text{CMRR} = \biggm\vert \dfrac{A_d}{A_c} \biggm\vert = 1 + 2\cdot g_m R_E\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_{c} = \dfrac{v_1 + v_2 }{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_{id} = v_1 - v_2\)</span></p>
+<p><span class="math notranslate nohighlight">\(v_o = A_d\cdot v_{id} + A_c \cdot v_{c}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -463,7 +460,7 @@ Here’s my dropdown<div class="summary-down docutils">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">&lt;no title&gt;</p>
+                <p class="prevnext-title">Aptitude</p>
             </div>
         </a>
     </div>

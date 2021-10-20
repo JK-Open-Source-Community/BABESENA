@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; J-Book</title>
+    <title>Aptitude &#8212; J-Book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -88,7 +90,7 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../README.html">
+  <a class="reference internal" href="../index.html">
    Home
   </a>
  </li>
@@ -98,10 +100,15 @@
   Mathematics and Aptitude
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="maths.html">
    Mathematics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Aptitude
   </a>
  </li>
 </ul>
@@ -162,6 +169,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../electronics/signal-system/signal_system.html">
    Signals and Systems
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Control System
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electronics/control-system/control_system.html">
+   Control System
   </a>
  </li>
 </ul>
@@ -250,7 +269,32 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#percentage">
+   Percentage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logarithms">
+   Logarithms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#si-ci">
+   SI-CI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#permutation-and-combination">
+   Permutation And Combination
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-system">
+   Number System
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -262,11 +306,282 @@
         
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aptitude</span>
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="aptitude">
+<h1>Aptitude<a class="headerlink" href="#aptitude" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="percentage">
+<h2>Percentage<a class="headerlink" href="#percentage" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+percentage change<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+by what percent is x more/less <code class="docutils literal notranslate"><span class="pre">than</span></code> y<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(\%=\dfrac{x-y}{y}\times 100\)</span></p>
 </div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+15% increase in x or 15% more than x<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+fundamental<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">x + (15% of x )</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x + (\frac{15}{100} \times x )\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x+0.15x\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=1.15x\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+quick<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\((1+0.15)x\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(1.15x\)</span></p>
+</div>
+</details></div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+15% decrease in x or 15% less than x<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+fundamental<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">x - (15% of x )</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x - (\frac{15}{100} \times x )\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x-0.15x\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=0.85x\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+quick<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\((1-0.15)x\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=0.85x\)</span></p>
+</div>
+</details></div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+200% increase in x or 200% more than x<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+fundamental<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">x + (200% of x )</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x + (\frac{200}{100} \times x )\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=x+2x\)</span></p>
+<p class="card-text"><span class="math notranslate nohighlight">\(=3x\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+quick<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\((1+2)x\)</span>
+<span class="math notranslate nohighlight">\(=3x\)</span></p>
+</div>
+</details></div>
+</details></div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+successive percentage<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight">
+\[x \xrightarrow{a\% \uparrow } (1+\frac{a}{100} )x \xrightarrow{b\% \uparrow } (1+\frac{b}{100} )(1+\frac{a}{100} )x \xrightarrow{c\% \uparrow } (1+\frac{c}{100} )(1+\frac{b}{100} )(1+\frac{a}{100} )x \cdots\]</div>
+<div class="math notranslate nohighlight">
+\[x \xrightarrow{a\% \uparrow } (1+a\% )x \xrightarrow{b\% \uparrow} (1+b\% )(1+a\% )x \xrightarrow{c\% \uparrow} (1+c\% )(1+b\% )(1+a\% )x \cdots\]</div>
+<div class="math notranslate nohighlight">
+\[x \xrightarrow{a\% \downarrow } (1-\frac{a}{100} )x \xrightarrow{b\% \downarrow} (1-\frac{b}{100} )(1-\frac{a}{100} )x \xrightarrow{c\% \downarrow} (1-\frac{c}{100} )(1-\frac{b}{100} )(1-\frac{a}{100} )x \cdots\]</div>
+<div class="math notranslate nohighlight">
+\[x \xrightarrow{a\% \downarrow } (1-a\% )x \xrightarrow{b\% \downarrow} (1-b\% )(1-a\% )x \xrightarrow{c\% \downarrow} (1-c\% )(1-b\% )(1-a\% )x \cdots\]</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+x % of y<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight">
+\[\dfrac{x}{100} \times y\]</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+examples<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+% increase<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">1.1x = 10% increase in x</p>
+<p class="card-text">1.2x = 20% increase in x</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+% decrease<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">0.8x = 20% decrease in x</p>
+<p class="card-text">0.2X = 80% decrease in x</p>
+</div>
+</details></div>
+</details></div>
+<div class="section" id="logarithms">
+<h2>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>if <span class="math notranslate nohighlight">\(log_a(x)=y\)</span>  then, x=?</p>
+<p><span class="math notranslate nohighlight">\(\boxed{x = a^y}\)</span></p>
+<p><span class="math notranslate nohighlight">\(log_a(x) \ne x \cdot log(a)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_a(m \times n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(= log_a(m) + log_a(n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\neq log_a(m + n)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_a(\frac{m}{n})\)</span></p>
+<p><span class="math notranslate nohighlight">\(= log_a(m)- log_a(n)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\neq log_a(m-n)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_a(x^m)\)</span></p>
+<p><span class="math notranslate nohighlight">\(= m\cdot log_a(x)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_{a^n}(x)\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\frac{1}{n}log_a(x)\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_a(1)\)</span></p>
+<p><span class="math notranslate nohighlight">\(=0\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(log_a(a)\)</span></p>
+<p><span class="math notranslate nohighlight">\(=1\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(a^{log_a(x)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(=x\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(a^{\frac{1}{n}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^{\frac{1}{n}} = \sqrt[n]{a}\)</span> = <span class="math notranslate nohighlight">\(n^{th} \text{ root of a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^{\frac{1}{2}} = \sqrt[2]{a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^{\frac{1}{3}} = \sqrt[3]{a}\)</span></p>
+</li>
+</ul>
+</div>
+<div class="section" id="si-ci">
+<h2>SI-CI<a class="headerlink" href="#si-ci" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>CI</p>
+<p><span class="math notranslate nohighlight">\(\text{amount}=P(1+\frac{r}{100} )^n\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{CI}=A-I= P(1+\frac{r}{100} )^n -P\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{CI}\ne P(1+\frac{r}{100} )^n\)</span></p>
+<p>CI = CI in this year - CI of previous Year</p>
+</li>
+<li><p>Difference CI-SI for 2 years</p>
+<p><span class="math notranslate nohighlight">\(CI-SI=\color {green}P(\frac{r}{100})^2\)</span></p>
+</li>
+<li><p>Difference CI-SI for 3 years</p>
+<p><span class="math notranslate nohighlight">\(CI-SI=\color {green}P(\frac{r}{100})^3 + 3P(\frac{r}{100})^2\)</span></p>
+</li>
+</ul>
+</div>
+<div class="section" id="permutation-and-combination">
+<h2>Permutation And Combination<a class="headerlink" href="#permutation-and-combination" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Permutation</p>
+<p><span class="math notranslate nohighlight">\(^nP_r=^nC_r\times R!\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(^nC_{r-1}+^nC_r=^{n+1}C_r\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\binom{n}{r}\)</span></p>
+<p><span class="math notranslate nohighlight">\(=\frac{n!}{(n-r)!r!}\)</span></p>
+</li>
+<li><p>properties of <span class="math notranslate nohighlight">\(\binom{n}{r}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{r}=\binom{n}{n-r}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{0}=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{1}=n\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\((a + b)^n\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \binom{n}{0}a^{n}b^{0} +\binom{n}{1}a^{n-1}b^{1}+\binom{n}{2}a^{n-2}b^{2}+...+\binom{n}{n-1}a^{1}b^{n-1}+\binom{n}{n}a^{0}b^{n}\)</span></p>
+</li>
+</ul>
+</div>
+<div class="section" id="number-system">
+<h2>Number System<a class="headerlink" href="#number-system" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(N = a^p b^q  c^r\)</span></p>
+<ul>
+<li><p>number of factors of N</p>
+<p>=(p + 1) (q + 1) (r + 1)</p>
+</li>
+<li><p>can be expressed as the product of two factors in</p>
+<p>1/2 {(p + 1) (q + 1) (r + 1)} ways</p>
+</li>
+<li><p>if N is a perfect square, it can be expressed</p>
+<ul>
+<li><p>as a product of two DIFFERENT factors in</p>
+<p>1/2 {(p + 1) (q + 1) (r + 1) - 1 } ways</p>
+</li>
+<li><p>as a product of two factors in</p>
+<p>1/2 {(p + 1) (q + 1) (r + 1)  +1} ways</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>LCM × HCF</p>
+<p>= product of two numbers</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sum\limits_{k=1}^{n} k=1^1 + 2^1 + 3^1 + … + n^1\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \dfrac{n(n + 1)}{2}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\sum\limits_{k=1}^{n} k^2=1² + 2² + 3² + … + n²\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \dfrac{n ( n + 1 ) (2n + 1)} { 6}\)</span></p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(1³ + 2³ + 3³ + …+ n³\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \Big(\dfrac{n(n + 1)}{ 2}\Big)^2\)</span></p>
+</li>
+</ul>
 </div>
 </div>
 

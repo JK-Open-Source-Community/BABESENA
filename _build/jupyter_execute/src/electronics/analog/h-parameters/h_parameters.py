@@ -86,3 +86,9 @@ d1 += elm.Line().right()
 
 d1.draw()
 
+
+# In[ ]:
+
+
+
+

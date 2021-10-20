@@ -2,19 +2,14 @@
 # coding: utf-8
 
 # # Analog Electronics and Circuits
+
 # 
-# ```{admonition} power is absorbed in case of semiconductor devices
-# :class: dropdown
+# ```{dropdown} power is absorbed in case of semiconductor devices
 # current direction should oppose voltage to make power -ve for example breakdown voltage should oppose the direction of flow of current
 # ```
-# ```{dropdown} Here's my dropdown
-# And here's my dropdown content
 # 
-# ```{dropdown} Here's my dropdown
-# And here's my dropdown content
-# ```
+
 # 
-# ```
 # 
 # - measuring devices
 #     - iron voltmeter
@@ -139,8 +134,3 @@
 #         $v_{id} = v_1 - v_2$
 #         
 #         $v_o = A_d\cdot v_{id} + A_c \cdot v_{c}$
-
-# ```{admonition} Click the button to reveal!
-# :class: dropdown
-# Some hidden toggle content!
-# ```

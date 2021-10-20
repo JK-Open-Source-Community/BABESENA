@@ -30,11 +30,11 @@
 # ```    
 # 
 
-# ```{dropdown} CDF
+# ````{dropdown} CDF
 #     
 # $F_X(x) = P(X\leq x) = 1-P(X>x)$
 #     
-# ```{dropdown} properties of CDF
+# ::::{dropdown} properties of CDF
 # 
 # 1. $0\le F_X(x)\le1$
 # 2. $F_X(\infty)=P(X\le \infty)=1$
@@ -42,34 +42,33 @@
 # 4. $F_X(-\infty)+F_X(\infty)=1$
 # 5. $F_X(x)$ is non-decreasing function of x 
 # 
-# ```{dropdown} graph of CDF is continuous from right at a point x=a 
+# :::{dropdown} graph of CDF is continuous from right at a point x=a 
 # $ F_X(a)=F_X(a^{+}) $
-# ```
-# ```{dropdown} range calculations   
+# :::
+# 
+# :::{dropdown} range calculations   
 # 
 # $\color{green}{F_X(b^+)-F_X(a^+)=P(a<X\le b)}$          
 # change inequalities according to $b^{\pm}$ and $a^{\pm}$
 # $\color{green}  P(X=a) =F_X(a^+)-F_X(a^-)$ = size of jump
+# :::
 # 
-# ```
-# 
-# ```
-# ```
-# ```
+# ::::
+# ````
 # 
 
-# ```{dropdown} PDF
+# ````{dropdown} PDF
 #     
 # $$f_X(x) = \dfrac{d}{dx}F_X(x)$$
 #     
-# ```{dropdown} properties of PDF
+# :::{dropdown} properties of PDF
 # 1. $f_X(x)\ge0$
 # 2. $F_X(\infty)=\int_{-\infty}^{\infty}f_X(x)dx=1$ 
 # 3. $\color{lightgreen}F_X(x)=P(X\le x)=P(-\infty <X\le x)=\color{skyblue}\int_{-\infty}^{x}f_X(x)dx$ 
 # 4. $\color{green} P(a <X\le b)=\int_{a^+}^{b^+}f_X(x)dx$
 # 5.  $P(X=a) =\int_{a^-}^{a^+}f_X(x)dx$
-# ```
-# ```
+# :::
+# ````
 
 # ```{dropdown} PMF
 #     
@@ -413,15 +412,15 @@
 #         
 #     - bandpass density functions
 #         
-#         $A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{ESD}} \dfrac{A^2}{4}[G_{X}(f-f_c)+G_X(f+f_c)]$
+#         $$A \cdot X(t) \cos(\omega_c t) \overset{\text{ESD}} \longleftrightarrow \dfrac{A^2}{4}[G_{X}(f-f_c)+G_X(f+f_c)]$$
 #         
-#         $A \cdot X(t) \cos(\omega_c t) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]$
+#         $$A \cdot X(t) \cos(\omega_c t) \overset{\text{PSD}} \longleftrightarrow  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]$$
 #         
-#         - if $\theta \sim [0,2\pi]$ and $X(t)$ is WSSRP
+#         - if $$\theta \sim [0,2\pi]$ and $X(t)$$ is WSSRP
 #             
-#             $A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{PSD}}  \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]$  
+#             $$A \cdot X(t) \cos(\omega_c t+\theta) \overset{\text{PSD}} \longleftrightarrow \dfrac{A^2}{4}[S_{X}(f-f_c)+S_X(f+f_c)]$$  
 #             
-#             $A \cdot X(t) \cos(\omega_c t+\theta) \xleftrightarrow{\text{ACF}}\dfrac{A^2}{2}R_X (\tau) \cos (\omega_c\tau)$
+#             $$A \cdot X(t) \cos(\omega_c t+\theta) \overset{\text{ACF}} \longleftrightarrow \dfrac{A^2}{2}R_X (\tau) \cos (\omega_c\tau)$$
 #             
 # 
 # ## analog communication
@@ -565,7 +564,7 @@
 #                 
 #                
 #                 
-#                 - -90 $\degree$  hilbert wideband transform (phase shifter) is not practical
+#                 - -90$^{\circ}$  hilbert wideband transform (phase shifter) is not practical
 #                     
 #                     $\phi = - \tan^{-1} (\omega RC)$                 RC → High , $\omega$  → fixed
 #                     
