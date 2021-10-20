@@ -22,24 +22,24 @@
 # - gauss law
 #     - Integral form of Gauss law
 #         
-#          $\displaystyle\oiint D\cdot dS = \psi _{e} \varpropto Q$
+#          $$\displaystyle\unicode{x222F} D\cdot dS = \psi _{e} \varpropto Q$$
 #         
 #     - Gauss Divergence theorem
 #         
-#          $\displaystyle\oiint D\cdot dS = \iiint \nabla \cdot D dV$
+#          $$\displaystyle\unicode{x222F} D\cdot dS = \iiint \nabla \cdot D dV$$
 #         
 #     - Point form of Gauss Law
 #         
-#         $\rho _{v} = \nabla \cdot \vec{D}$ 
+#         $$\rho _{v} = \nabla \cdot \vec{D}$$ 
 #         
 # - ampere's law
 #     - Integral form of Ampere's law
 #         
-#           $\displaystyle\oint \vec{H}\cdot \vec{dl} = I$
+#         $$\displaystyle\oint \vec{H}\cdot \vec{dl} = I$$
 #         
 #     - Ampere Circulation
 #         
-#          $\displaystyle\oint H\cdot dl = \iint (\nabla \times H) dS$
+#          $$\displaystyle\oint H\cdot dl = \iint (\nabla \times H) dS$$
 #         
 #     - Point form of Ampere Law
 #         
@@ -47,7 +47,7 @@
 #         
 #     - modified ampere's law
 #         
-#          $\displaystyle\oint H\cdot dl = I_c + I_d$
+#          $$\displaystyle\oint H\cdot dl = I_c + I_d$$
 #         
 #         $\nabla\times H = J_c+J_d$
 #         
@@ -249,11 +249,11 @@
 #         
 # - maxwell's equations
 #     
-#     $\displaystyle\begin{array}{c:c}
-#     \color{orange} \text{integral} & \color{orange} \text {point} \\ \hdashline \oiint D\cdot dS =  Q &  \nabla \cdot \vec{D}=\rho _{v} \\ \oint E\cdot dl =  0 & \nabla \times \vec{E}=0 \\\oiint B\cdot dS =  0 &  \nabla \cdot \vec{B}=0 \\ \oint H\cdot dl =  I & \nabla \times \vec{H}=0 \end{array}$ 
+#     $$\displaystyle\begin{array}{c:c}
+#     \color{orange} \text{integral} & \color{orange} \text {point} \\ \hdashline \unicode{x222F} D\cdot dS =  Q &  \nabla \cdot \vec{D}=\rho _{v} \\ \oint E\cdot dl =  0 & \nabla \times \vec{E}=0 \\\unicode{x222F} B\cdot dS =  0 &  \nabla \cdot \vec{B}=0 \\ \oint H\cdot dl =  I & \nabla \times \vec{H}=0 \end{array}$$
 #     
 # 
-# $j = e^{j90\degree}$ (delay)
+# $j = e^{j90^{\circ}}$ (delay)
 # 
 # - continuity equation
 #     
@@ -412,13 +412,13 @@
 #         
 #     - smith chart
 #         
-#         ![Electromagnetic%20Theory%20d4718a13eaf9480984c7d37be18795e2/Untitled.png](Electromagnetic%20Theory%20d4718a13eaf9480984c7d37be18795e2/Untitled.png)
 #         
 # - antenna
 #     
 #     $|E_\theta| = \dfrac{I_m}{2}\dfrac{dl}{\lambda}\dfrac{\sin \theta}{r}\eta$
 #     
-#     $P_{avg} = \frac{1}{2}E_\theta H_\phi$                   $P_{total} = \oiint P_{avg} \cdot ds$ 
+#     $P_{avg} = \frac{1}{2}E_\theta H_\phi$           
+#     $$P_{total} = \unicode{x222F} P_{avg} \cdot ds$$ 
 #     
 #     $\boxed{W_r =I_{rms}^2 R_r= I_{rms}^2 80\pi^2 \Big ( \dfrac{dl}{\lambda} \Big)^2}$     ( isotropic antenna )
 #     
@@ -498,9 +498,9 @@
 #         
 #         $\psi =\alpha +\beta d\cos\theta$
 #         
-#         `end fire` : $\psi =0$,        $\alpha = \pm \beta d$,       $\theta_{max} =0\degree , 180\degree$  
+#         `end fire` : $\psi =0$,        $\alpha = \pm \beta d$,       $\theta_{max} =0^{\circ} , 180^{\circ}$  
 #         
-#         `broadside array` : $\psi =0$,      $\alpha =0$,      $\theta_{max} =90\degree$  
+#         `broadside array` : $\psi =0$,      $\alpha =0$,      $\theta_{max} =90^{\circ}$  
 #         
 #         - N-element-uniform-isotropic sources
 #             
@@ -510,7 +510,7 @@
 #             
 #     - multiplication of pattern
 #         
-#         $\text{final pattern = unit pattern $\times$ array factor } = U(\theta,\phi) \cos (\frac{\psi}{2})$
+#         $$\text{final pattern = unit pattern $\times$ array factor } = U(\theta,\phi) \cos (\frac{\psi}{2})$$
 #         
 #     - friis formula
 #         
@@ -529,11 +529,11 @@
 #         - single component of E
 #         - 2 components of E (both in phase)
 #     - circular
-#         - 2 components having equal amplitude and out of phase by $90 \degree$
+#         - 2 components having equal amplitude and out of phase by $90 ^{\circ}$
 #     - elliptical
 #         - 2 components of E
-#             - unequal amplitude with any phase other than $0\degree / 180 \degree$
-#             - equal amplitude with any phase other than $0\degree/ 90\degree / 180 \degree$
+#             - unequal amplitude with any phase other than $0^{\circ} / 180 ^{\circ}$
+#             - equal amplitude with any phase other than $0^{\circ}/ 90^{\circ} / 180 ^{\circ}$
 #     - sense of rotation
 #         
 #         propagation > thumb
@@ -607,7 +607,7 @@
 #             
 #             p → number of feeds in $\rho$
 #             
-#             n=0 → $\phi=0\degree \text{ or } 180\degree$
+#             n=0 → $\phi=0^{\circ} \text{ or } 180^{\circ}$
 #             
 #             $TE_{n0}$  and $TM_{n0}$ → `evanescent modes`
 #             
