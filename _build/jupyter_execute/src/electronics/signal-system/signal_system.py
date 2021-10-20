@@ -306,7 +306,7 @@
 #     
 #     $\rm{x\left[n\right]=\dfrac{1}{2\pi}\displaystyle \int \limits_{ - \pi }^\pi {X(j\omega)e^{j\omega n}}d\omega}$
 #     
-#     $\text{z-transform} \xleftrightarrow{z=e^{j\omega}} \text{DTFT}$
+#     $\text{z-transform} \overset{z=e^{j\omega}} \longleftrightarrow \text{DTFT}$
 #     
 #     - duality
 #         - $x(t) \leftrightarrow X(\omega)$
@@ -337,13 +337,6 @@
 #         
 #         $\boxed{A\cdot tri(\frac{t}{T}) \longleftrightarrow  AT\cdot Sa^2(\frac{\omega T}{2})}$ 
 #         
-#         ![Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled.png](Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled.png)
-#         
-#         ![Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled%201.png](Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/Untitled%201.png)
-#         
-#         ![Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389438409.jpg327925182995849076.jpg](Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389438409.jpg327925182995849076.jpg)
-#         
-#         ![Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389412025.jpg5743089408707252573.jpg](Signals%20and%20Systems%2003aa08820c8e41469af9f062c1f234de/image-1611389412025.jpg5743089408707252573.jpg)
 #         
 #     - properties
 #         - time shifting

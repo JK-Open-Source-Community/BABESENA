@@ -64,11 +64,11 @@
 #     
 #     `singular point` → point where complex function becomes non-analytic
 #     
-#     laurent series around singularity: $f(z) = \sum \limits _{n=0}^{\infty} a_{n} (z-a)^{n} +\sum \limits _{m=1}^{\infty} b_{-m} (z-a)^{-m}$ 
+#     laurent series around singularity: $$ f(z) = \sum \limits _{n=0}^{\infty} a_{n} (z-a)^{n} +\sum \limits _{m=1}^{\infty} b_{-m} (z-a)^{-m} $$ 
 #     
-#     $\displaystyle \int_C f (z) dz = 2 \pi i \cdot\text{(sum of residues at the singular points within $z_o$ )}$
+#     $$\displaystyle \int_C f (z) dz = 2 \pi i \cdot\text{(sum of residues at the singular points within $z_o$ )}$$
 #     
-#     $\text{residue}(f(z_o))=\text{coefficient of $(z-a)^{-1}$}=\lim \limits_{z\rightarrow z_o} \dfrac{1}{(n-1)!}\Big[ \dfrac{d^{n-1}}{dz^{n-1}}[(z-z_o)^nf(z)]\Big]$
+#     $$\text{residue}(f(z_o))=\text{coefficient of $(z-a)^{-1}$}=\lim \limits_{z\rightarrow z_o} \dfrac{1}{(n-1)!}\Big[ \dfrac{d^{n-1}}{dz^{n-1}}[(z-z_o)^nf(z)]\Big]$$
 # 
 # ```
 
