@@ -1,6 +1,6 @@
 # TeXeD
 
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JK-Open-Source-Community/babesena/HEAD)
 [![GitHub forks](https://img.shields.io/github/forks/JK-Open-Source-Community/babesena?style=social)](https://github.com/JK-Open-Source-Community/babesena/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/JK-Open-Source-Community/babesena?style=social)](https://github.com/JK-Open-Source-Community/babesena/stargazers)
 
